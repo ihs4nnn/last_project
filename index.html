@@ -4,307 +4,906 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV. Heriest Advertising - We Touch With Colours</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css?v=5" />
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:ital,wght@0,300;0,400;0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&display=swap');
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { width: 100%; overflow-x: hidden; background-color: #ffffff; font-family: 'Poppins', 'Inter', sans-serif; }
-    .furniture-33-frame-furniture33 { transform-origin: top left; margin: 0 auto; }
+    .furniture-33-frame-furniture33 { transform-origin: top left; margin: 0 auto; width: 2848px; max-width: 2848px; overflow: hidden; display: flex; flex-direction: column; align-items: center; background-color: #fff; }
     .furniture-33-text-beranda-ff1, .furniture-33-text-produk4e1, .furniture-33-text-portofolio-td1,
     .furniture-33-text-faq-ic1, .furniture-33-text-tentang-kami7b1, .furniture-33-frame-mx,
     .furniture-33-frame-group48095399-hk, .furniture-33-frame-group480953999e,
     .furniture-33-frame-tombol-submit-ac { cursor: pointer; }
+
+    /* WRAPPER HALAMAN */
+    .user-subpage { width: 100%; display: flex; flex-direction: column; align-items: center; background-color: #ffffff; }
+
+    /* 1. HALAMAN PRODUK (10 LAYANAN) */
+    .zaki-katalog-container { width: 2459px; max-width: 2459px; padding: 110px 0 140px; display: flex; flex-direction: column; }
+    .zaki-header-flex { display: flex; align-items: flex-end; justify-content: space-between; gap: 60px; margin-bottom: 70px; }
+    .zaki-kicker { font-family: "Montserrat", sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 2.5px; color: #dc2626; text-transform: uppercase; margin-bottom: 14px; }
+    .zaki-title { font-family: "Montserrat", sans-serif; font-size: 56px; font-weight: 800; color: #111827; line-height: 1.2; }
+    .zaki-subtitle { max-width: 780px; font-family: "Inter", sans-serif; font-size: 23px; line-height: 36px; color: #6b7280; text-align: right; }
+    .zaki-grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 54px; width: 100%; }
+    .zaki-card { background-color: #ffffff; border: 1px solid #e5e7eb; border-radius: 28px; overflow: hidden; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06); display: flex; flex-direction: column; transition: transform 0.25s ease; }
+    .zaki-card:hover { transform: translateY(-6px); }
+    .zaki-img-wrap { position: relative; width: 100%; height: 410px; background-color: #111827; overflow: hidden; }
+    .zaki-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .zaki-tag-tl { position: absolute; top: 22px; left: 22px; background-color: rgba(17, 24, 39, 0.85); color: #ffffff; font-size: 18px; font-weight: 600; padding: 10px 20px; border-radius: 12px; }
+    .zaki-tag-br { position: absolute; bottom: 20px; right: 22px; background-color: #ffffff; color: #b91c1c; font-size: 18px; font-weight: 700; padding: 10px 22px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); }
+    .zaki-body { padding: 36px 38px 38px; display: flex; flex-direction: column; flex-grow: 1; }
+    .zaki-code { font-size: 18px; font-weight: 700; color: #dc2626; letter-spacing: 1px; margin-bottom: 10px; }
+    .zaki-card-title { font-family: "Montserrat", sans-serif; font-size: 32px; font-weight: 800; color: #111827; line-height: 1.3; margin-bottom: 16px; }
+    .zaki-card-desc { font-size: 21px; line-height: 33px; color: #4b5563; margin-bottom: 28px; }
+    .zaki-tabs { display: flex; align-items: center; gap: 28px; border-bottom: 1px solid #e5e7eb; padding-bottom: 12px; margin-bottom: 20px; }
+    .zaki-tabs span { font-size: 19px; font-weight: 600; color: #9ca3af; position: relative; }
+    .zaki-tabs span.active { color: #dc2626; font-weight: 700; }
+    .zaki-tabs span.active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -14px; height: 3px; background-color: #dc2626; }
+    .zaki-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 32px; flex-grow: 1; }
+    .zaki-list li { font-size: 20px; line-height: 30px; color: #374151; padding-left: 20px; position: relative; }
+    .zaki-list li::before { content: "•"; position: absolute; left: 0; color: #dc2626; font-weight: 800; }
+    .zaki-pills { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; }
+    .zaki-pills span { padding: 8px 18px; border: 1px solid #d1d5db; border-radius: 10px; font-size: 18px; font-weight: 600; color: #1f2937; background-color: #f9fafb; }
+    .zaki-note { font-size: 20px; line-height: 31px; color: #4b5563; margin-bottom: 32px; flex-grow: 1; }
+    .zaki-actions { display: flex; align-items: center; justify-content: space-between; gap: 18px; margin-top: auto; }
+    .zaki-btn-spec { flex: 1; height: 64px; background-color: #f9fafb; border: 1px solid #d1d5db; border-radius: 14px; font-size: 20px; font-weight: 600; color: #111827; cursor: pointer; }
+    .zaki-btn-order { height: 64px; padding: 0 32px; background-color: #dc2626; border: none; border-radius: 14px; font-size: 21px; font-weight: 700; color: #ffffff; cursor: pointer; }
+    .zaki-showroom-box { margin-top: 100px; width: 100%; background: linear-gradient(135deg, #111827 0%, #1e293b 100%); border-radius: 36px; padding: 64px 72px; color: #ffffff; }
+    .zaki-showroom-top { display: flex; align-items: center; justify-content: space-between; gap: 48px; margin-bottom: 48px; }
+    .zaki-showroom-badge { display: inline-block; background-color: rgba(255, 255, 255, 0.12); color: #fbbf24; font-size: 18px; font-weight: 700; padding: 10px 22px; border-radius: 12px; margin-bottom: 18px; }
+    .zaki-showroom-top h2 { font-family: "Montserrat", sans-serif; font-size: 44px; font-weight: 800; line-height: 1.3; max-width: 1250px; }
+    .zaki-showroom-right { display: flex; flex-direction: column; align-items: center; gap: 12px; flex-shrink: 0; }
+    .zaki-wa-btn { display: inline-flex; align-items: center; justify-content: center; gap: 14px; background-color: #ff0000; color: #ffffff; text-decoration: none; font-size: 24px; font-weight: 700; padding: 24px 48px; border-radius: 18px; }
+    .zaki-admin-phones { font-size: 18px; color: #d1d5db; }
+    .zaki-slogan-yellow { font-size: 18px; font-weight: 700; color: #fbbf24; }
+    .zaki-showroom-grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
+    .zaki-loc-item { background-color: rgba(255, 255, 255, 0.06); border: 1px solid rgba(255, 255, 255, 0.14); border-radius: 24px; padding: 36px 40px; }
+    .zaki-loc-item h4 { font-size: 23px; font-weight: 700; color: #fbbf24; margin-bottom: 12px; }
+    .zaki-loc-item p { font-size: 21px; line-height: 32px; color: #f3f4f6; }
+    .zaki-loc-item span { display: block; margin-top: 8px; font-size: 19px; color: #9ca3af; }
+
+    /* 2. HALAMAN PORTOFOLIO */
+    .ferdi-porto-container { width: 2459px; max-width: 2459px; padding: 130px 0 180px; display: flex; flex-direction: column; align-items: center; }
+    .ferdi-header-center { display: flex; flex-direction: column; align-items: center; margin-bottom: 110px; }
+    .ferdi-header-center h1 { font-family: "Montserrat", sans-serif; font-size: 62px; font-weight: 800; color: #6b7280; letter-spacing: 2px; margin-bottom: 32px; }
+    .ferdi-red-line { width: 980px; height: 5px; background-color: #ef4444; border-radius: 4px; }
+    .ferdi-grid-3col { display: grid; grid-template-columns: repeat(3, 1fr); gap: 130px 90px; width: 100%; align-items: start; }
+    .ferdi-item { display: flex; flex-direction: column; align-items: center; }
+    .ferdi-photo { width: 100%; height: 700px; object-fit: cover; border-radius: 6px; box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08); margin-bottom: 56px; }
+    .ferdi-caption-box { width: 82%; background-color: #d9dce2; border-radius: 26px; padding: 32px 36px 38px; cursor: pointer; }
+    .ferdi-cap-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+    .ferdi-cap-kicker { font-size: 16px; font-weight: 700; color: #dc2626; text-transform: uppercase; }
+    .ferdi-cap-arrow { width: 34px; height: 34px; border-radius: 50%; background-color: #ffffff; color: #111827; font-size: 18px; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .ferdi-caption-box h3 { font-size: 24px; font-weight: 800; color: #111827; margin-bottom: 12px; }
+    .ferdi-caption-box p { font-size: 17px; line-height: 26px; color: #374151; }
+    .ferdi-cta-red-card { width: 100%; height: 540px; margin-top: 80px; background-color: #f43f3f; padding: 64px 56px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; color: #ffffff; }
+    .ferdi-cta-sub { font-size: 32px; line-height: 44px; margin-bottom: 44px; }
+    .ferdi-cta-main { font-family: "Montserrat", sans-serif; font-size: 38px; line-height: 50px; font-weight: 800; margin-bottom: 54px; }
+    .ferdi-cta-btn { background-color: #ffffff; color: #000000; border: none; border-radius: 40px; padding: 20px 76px; font-size: 26px; font-weight: 700; cursor: pointer; }
+
+    /* 3. HALAMAN FAQ */
+    .faq-hero-banner { width: 2848px; max-width: 2848px; background-color: #f5f5f5; padding: 150px 195px 140px; text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .faq-hero-banner h1 { font-family: "Montserrat", sans-serif; font-size: 165px; font-weight: 900; color: #000000; line-height: 1.08; margin-bottom: 44px; }
+    .faq-hero-banner p { font-size: 36px; font-weight: 300; color: #6b7280; line-height: 54px; }
+    .faq-body-container { width: 2459px; max-width: 2459px; padding: 110px 0 180px; display: flex; flex-direction: column; align-items: center; }
+    .faq-search-wrapper { width: 1280px; height: 105px; border: 2px solid #9ca3af; border-radius: 60px; background-color: #f9fafb; display: flex; align-items: center; padding: 0 42px; gap: 28px; margin-bottom: 140px; }
+    .faq-search-icon { font-size: 40px; color: #6b7280; }
+    .faq-search-wrapper input { width: 100%; border: none; background: transparent; font-size: 34px; color: #111827; outline: none; }
+    .faq-two-col { width: 100%; display: grid; grid-template-columns: 780px 1fr; gap: 110px; align-items: start; }
+    .faq-left-cats { border-right: 4px solid #9ca3af; padding-right: 60px; display: flex; flex-direction: column; gap: 48px; min-height: 820px; }
+    .faq-cat-btn { display: flex; align-items: center; gap: 32px; background: transparent; border: none; text-align: left; font-size: 34px; color: #6b7280; cursor: pointer; padding: 10px 0; }
+    .faq-cat-btn.active, .faq-cat-btn:hover { color: #111827; font-weight: 600; }
+    .faq-cat-ico { font-size: 44px; width: 56px; text-align: center; }
+    .faq-acc-row { border-top: 3px solid #9ca3af; padding: 48px 0; cursor: pointer; }
+    .faq-acc-row:last-child { border-bottom: 3px solid #9ca3af; }
+    .faq-acc-head { display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+    .faq-acc-head h4 { font-size: 38px; font-weight: 500; color: #111827; }
+    .faq-acc-circle { width: 58px; height: 58px; border: 2px solid #4b5563; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+    .faq-acc-body { display: none; margin-top: 32px; font-size: 28px; line-height: 44px; color: #6b7280; max-width: 1320px; }
+    .faq-acc-row.open .faq-acc-body { display: block; }
+
+    /* 4. HALAMAN TENTANG KAMI */
+    .sarah-band-red { width: 2848px; max-width: 2848px; background-color: #ff0000; padding: 110px 260px; color: #ffffff; }
+    .sarah-inner-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 110px; align-items: center; }
+    .sarah-kicker-white { display: block; font-size: 22px; font-weight: 600; letter-spacing: 2px; color: rgba(255,255,255,0.85); margin-bottom: 24px; }
+    .sarah-red-text h1 { font-family: "Montserrat", sans-serif; font-size: 74px; font-weight: 600; line-height: 1.2; margin-bottom: 36px; }
+    .sarah-red-text p { font-size: 30px; line-height: 48px; max-width: 780px; }
+    .sarah-red-img-wrap img { width: 100%; height: 760px; object-fit: cover; background-color: #ffffff; }
+    .sarah-band-black { width: 2848px; max-width: 2848px; background-color: #000000; padding: 150px 260px 170px; color: #ffffff; }
+    .sarah-black-top { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 100px; }
+    .sarah-big-logo { height: 360px; width: auto; object-fit: contain; }
+    .sarah-kicker-red { display: block; font-size: 22px; font-weight: 700; letter-spacing: 2px; color: #ef4444; margin-bottom: 20px; }
+    .sarah-black-bottom { display: flex; justify-content: flex-end; }
+    .sarah-black-bottom p { max-width: 1420px; font-size: 34px; line-height: 54px; color: #f3f4f6; }
+    .sarah-band-white-pad { width: 2848px; max-width: 2848px; background-color: #ffffff; padding: 140px 220px; }
+    .sarah-yellow-box { width: 100%; background-color: #f4ea00; padding: 90px 120px 110px; color: #111827; }
+    .sarah-yellow-kicker { display: block; font-size: 22px; font-weight: 600; letter-spacing: 2px; color: #4b5563; margin-bottom: 18px; }
+    .sarah-yellow-title { font-family: "Montserrat", sans-serif; font-size: 62px; font-weight: 600; text-align: center; margin-bottom: 110px; }
+    .sarah-4cols { display: grid; grid-template-columns: repeat(4, 1fr); gap: 64px; text-align: center; }
+    .sarah-val-icon { font-size: 74px; color: #374151; margin-bottom: 36px; }
+    .sarah-val-item h4 { font-size: 34px; font-weight: 600; margin-bottom: 22px; }
+    .sarah-val-item p { font-size: 22px; line-height: 34px; color: #374151; }
+    .sarah-bersama-left h2 { font-family: "Montserrat", sans-serif; font-size: 86px; font-weight: 500; line-height: 1.15; color: #111827; margin-bottom: 44px; }
+    .sarah-bersama-left p { font-size: 32px; line-height: 52px; color: #374151; max-width: 820px; margin-bottom: 70px; }
+    .sarah-red-arrow-link { display: inline-flex; align-items: center; gap: 18px; cursor: pointer; }
+    .sarah-line { width: 280px; height: 3px; background-color: #ef4444; display: inline-block; }
+    .sarah-chev { font-size: 46px; color: #374151; }
+    .sarah-bersama-img-wrap img { width: 100%; height: 1120px; object-fit: cover; }
   </style>
 </head>
 <body>
 
   <!-- ===================================================================== -->
-  <!-- VIEW 1: HALAMAN UTAMA USER (PAGE 1)                                   -->
+  <!-- VIEW 1: LAMAN USER (BERANDA, PRODUK, PORTOFOLIO, FAQ, TENTANG KAMI)   -->
   <!-- ===================================================================== -->
   <div id="user-view">
     <div id="n63654" class="furniture-33-frame-furniture33">
-      
-      <!-- 1. HERO SECTION -->
-      <div id="n63655" class="furniture-33-frame-hero-secion-e4">
-        <div id="n63656" class="furniture-33-frame-h1">
-          <div id="n63657" class="furniture-33-frame-gemini-generated-s2"></div>
-          <div id="n63658" class="furniture-33-frame-uz">
-            <div id="n63659" class="furniture-33-frame60">
-              <div id="n63660" class="furniture-33-frame-qg">
-                <div id="n63661" class="furniture-33-text-beranda-ff1"><p class="furniture-33-text-beranda-ff2">Beranda</p></div>
-                <div id="n63662" class="furniture-33-text-produk4e1"><p class="furniture-33-text-produk4e2">Produk</p></div>
-                <div id="n63663" class="furniture-33-text-portofolio-td1"><p class="furniture-33-text-portofolio-td2">Portofolio</p></div>
-                <div id="n63664" class="furniture-33-text-faq-ic1"><p class="furniture-33-text-faq-ic2">FAQ</p></div>
-                <div id="n63665" class="furniture-33-text-tentang-kami7b1"><p class="furniture-33-text-tentang-kami7b2">Tentang Kami</p></div>
+
+      <!-- NAVBAR UTAMA -->
+      <div id="n63658" class="furniture-33-frame-uz">
+        <div id="n63659" class="furniture-33-frame60">
+          <div id="n63660" class="furniture-33-frame-qg">
+            <div id="n63661" class="furniture-33-text-beranda-ff1 user-nav-link active" data-upage="beranda" onclick="switchUserPage('beranda', this)">
+              <p class="furniture-33-text-beranda-ff2">Beranda</p>
+            </div>
+            <div id="n63662" class="furniture-33-text-produk4e1 user-nav-link" data-upage="produk" onclick="switchUserPage('produk', this)">
+              <p class="furniture-33-text-produk4e2">Produk</p>
+            </div>
+            <div id="n63663" class="furniture-33-text-portofolio-td1 user-nav-link" data-upage="portofolio" onclick="switchUserPage('portofolio', this)">
+              <p class="furniture-33-text-portofolio-td2">Portofolio</p>
+            </div>
+            <div id="n63664" class="furniture-33-text-faq-ic1 user-nav-link" data-upage="faq" onclick="switchUserPage('faq', this)">
+              <p class="furniture-33-text-faq-ic2">FAQ</p>
+            </div>
+            <div id="n63665" class="furniture-33-text-tentang-kami7b1 user-nav-link" data-upage="tentang" onclick="switchUserPage('tentang', this)">
+              <p class="furniture-33-text-tentang-kami7b2">Tentang Kami</p>
+            </div>
+          </div>
+          <div id="n63666" class="furniture-33-frame-wa" style="display: flex; align-items: center; gap: 40px;">
+            <div id="n63667" class="furniture-33-frame-group55l9" onclick="switchUserPage('produk', document.querySelector('[data-upage=produk]'))" style="cursor: pointer;">
+              <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
+                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+              </svg>
+              <div id="n63671" class="furniture-33-frame-hq">
+                <div id="n63672" class="furniture-33-text4-sr1"><p class="furniture-33-text4-sr2" id="user-cart-badge">4</p></div>
               </div>
-              <div id="n63666" class="furniture-33-frame-wa" style="display: flex; align-items: center; gap: 40px;">
-                <div id="n63667" class="furniture-33-frame-group55l9">
-                  <svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                  </svg>
-                  <div id="n63671" class="furniture-33-frame-hq">
-                    <div id="n63672" class="furniture-33-text4-sr1"><p class="furniture-33-text4-sr2">4</p></div>
+            </div>
+            <button type="button" onclick="openAdminLogin()" class="btn-nav-admin">
+              Admin Login
+            </button>
+          </div>
+        </div>
+        <img src="css/logo_heriest.png" alt="Logo Heriest" onclick="switchUserPage('beranda', document.querySelector('[data-upage=beranda]'))" style="height: 65px; width: auto; object-fit: contain; cursor: pointer;" />
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- HALAMAN 1: BERANDA                                                  -->
+      <!-- =================================================================== -->
+      <div id="user-page-beranda" class="user-subpage">
+        <div id="n63655" class="furniture-33-frame-hero-secion-e4" style="min-height: 1464px;">
+          <div id="n63656" class="furniture-33-frame-h1" style="min-height: 1464px;">
+            <div id="n63657" class="furniture-33-frame-gemini-generated-s2" style="top: 0;"></div>
+            <div id="n63674" class="furniture-33-frame-yl">
+              <div id="n63675" class="furniture-33-frame9m">
+                <div id="n63676" class="furniture-33-text-tingkatkan-visibilita-kn1">
+                  <p class="furniture-33-text-tingkatkan-visibilita-kn2">TINGKATKAN VISIBILITAS BISNIS ANDA BERSAMA KAMI!!</p>
+                </div>
+                <div id="n63677" class="furniture-33-text-we-touch-vo1">
+                  <p class="furniture-33-text-we-touch-vo2">We Touch With Colours</p>
+                </div>
+              </div>
+              <div id="n63678" class="furniture-33-frame-mx" onclick="document.getElementById('n120179').scrollIntoView({behavior: 'smooth'})">
+                <div id="n63679" class="furniture-33-text-konsultasi-xy1"><p class="furniture-33-text-konsultasi-xy2">Konsultasi</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="brand-logos-bar">
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/github/000000" alt="GitHub" /><span>GitHub</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/canva/000000" alt="Canva" /><span style="font-style: italic; font-family: Georgia, serif;">Canva</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/spotify/000000" alt="Spotify" /><span>Spotify</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/instagram/000000" alt="Instagram" /><span style="font-style: italic; font-family: Georgia, serif;">Instagram</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/whatsapp/000000" alt="WhatsApp" /><span>WhatsApp</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/notion/000000" alt="Notion" /><span>Notion</span></div>
+          <div class="brand-item"><span style="font-weight: 800; font-size: 36px; letter-spacing: -1px;">zoom</span></div>
+          <div class="brand-item"><span style="font-style: italic; font-family: Georgia, serif; font-weight: 700; font-size: 34px;">dribbble</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/adobe/000000" alt="Adobe" /><span>Adobe</span></div>
+          <div class="brand-item"><span style="background: #000; color: #fff; padding: 4px 14px; font-weight: 700; font-size: 24px; letter-spacing: 1px;">Lenovo</span></div>
+          <div class="brand-item"><img src="https://cdn.simpleicons.org/hubspot/000000" alt="HubSpot" /><span>HubSpot</span></div>
+        </div>
+
+        <div id="n12297" class="furniture-33-frame-layanan-kami-we">
+          <div id="n63716" class="furniture-33-text-layanan-kami-cy1"><p class="furniture-33-text-layanan-kami-cy2">LAYANAN KAMI</p></div>
+          <div id="n63718" class="furniture-33-text-solusi-lengkap-qw1"><p class="furniture-33-text-solusi-lengkap-qw2">Solusi Lengkap Media Promosi</p></div>
+          <div id="n63719" class="furniture-33-text-solusi-cetak-fv1"><p class="furniture-33-text-solusi-cetak-fv2">Solusi cetak dan periklanan lengkap untuk bantu tingkatkan daya tarik bisnis Anda</p></div>
+          <div id="n63686" class="furniture-33-frame-rw">
+            <div id="n63687" class="furniture-33-frame-gv" onclick="switchUserPage('produk', document.querySelector('[data-upage=produk]'))" style="cursor: pointer;">
+              <div id="n102277" class="furniture-33-frame-lw">
+                <div id="n102278" class="furniture-33-frame-d5">
+                  <div id="n102279" class="furniture-33-text-neon-box-o61"><p class="furniture-33-text-neon-box-o62">Neon Box Custom</p></div>
+                  <div id="n102280" class="furniture-33-text-bahan-akrilik521">
+                    <p class="furniture-33-text-bahan-akrilik522">Bentuk bulat, kotak, atau custom sesuai logo. Bahan akrilik tebal dengan LED Samsung waterproof.</p>
                   </div>
                 </div>
-                <!-- TOMBOL MENUJU HALAMAN ADMIN -->
-                <button type="button" onclick="openAdminLogin()" class="btn-nav-admin">
-                  Admin Login
+                <div style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold;">&#8599;</div>
+              </div>
+              <img src="css/layanankami_neonbox.png" alt="Neon Box" id="n63695" class="furniture-33-image-neon-box-kw" />
+            </div>
+
+            <div id="n63696" class="furniture-33-frame-nt" onclick="switchUserPage('produk', document.querySelector('[data-upage=produk]'))" style="cursor: pointer;">
+              <div id="n63697" class="furniture-33-frame-yu">
+                <div id="n63698" class="furniture-33-frame-mf">
+                  <div id="n63699" class="furniture-33-text-cetak-banner-xg1"><p class="furniture-33-text-cetak-banner-xg2">Cetak Banner</p></div>
+                  <div id="n63700" class="furniture-33-text-ux1">
+                    <p class="furniture-33-text-ux2">Spanduk Flexi Korea, Jerman, Albatros, X-Banner &amp; Roll-Banner tajam resolusi tinggi.</p>
+                  </div>
+                </div>
+                <div style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold;">&#8599;</div>
+              </div>
+              <img src="css/layanankami_banner.png" alt="Cetak Banner" id="n63704" class="furniture-33-image61b-s-mt" />
+            </div>
+
+            <div id="n63706" class="furniture-33-frame8v" onclick="switchUserPage('produk', document.querySelector('[data-upage=produk]'))" style="cursor: pointer;">
+              <div id="n63707" class="furniture-33-frame-jw">
+                <div id="n63708" class="furniture-33-frame-ep">
+                  <div id="n63709" class="furniture-33-text-huruf-timbul-pq1"><p class="furniture-33-text-huruf-timbul-pq2">Huruf Timbul</p></div>
+                  <div id="n63710" class="furniture-33-text741">
+                    <p class="furniture-33-text742">Stainless steel elegan, galvanis, kuningan mewah, serta akrilik dengan lampu backlit modern.</p>
+                  </div>
+                </div>
+                <div style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold;">&#8599;</div>
+              </div>
+              <img src="css/layanankami_huruftimbul.png" alt="Huruf Timbul" id="n63715" class="furniture-33-image-tulisan3-nz" />
+            </div>
+          </div>
+        </div>
+
+        <div id="n99240" class="furniture-33-frame-pemesanan-sj">
+          <div id="n99246" class="furniture-33-frame-group427320852-yd">
+            <div id="n99252" class="furniture-33-text-alur-kerja-xw1"><p class="furniture-33-text-alur-kerja-xw2">Alur Kerja Kami</p></div>
+            <div id="n99255" class="furniture-33-text4-langkah8x1"><p class="furniture-33-text4-langkah8x2">4 langkah untuk memesan di heriest advertising</p></div>
+            <div id="n99251" class="furniture-33-text-oleh-karena0t1">
+              <p class="furniture-33-text-oleh-karena0t2">Kami menyadari waktu Anda sangat berharga untuk mengurus bisnis. Oleh karena itu, Heriest Advertising merancang sistem pelayanan dan pengerjaan yang praktis, transparan, dan minim hambatan. Dari tahap konsultasi ide hingga hasil cetak terpasang sempurna, semuanya dibuat mudah untuk Anda.</p>
+            </div>
+            <div id="n99247" class="furniture-33-frame-group480953999e" onclick="switchUserPage('faq', document.querySelector('[data-upage=faq]'))">
+              <div id="n99248" class="furniture-33-text-lihat-cara-cb1"><p class="furniture-33-text-lihat-cara-cb2">Lihat Cara Pesan &rarr;</p></div>
+            </div>
+          </div>
+          <img src="css/alurkerjakami.jpeg" alt="4 Langkah Pemesanan" id="n99269" class="furniture-33-image-gemini-generated-fa" />
+        </div>
+
+        <div id="n63720" class="furniture-33-frame-tentang-kami6j">
+          <div id="n99239" class="furniture-33-frame-group427320850-hj">
+            <img src="css/baground_beranda.jpeg" alt="Tentang Heriest Advertising" id="n63731" class="furniture-33-image-oip17p" />
+            <div id="n9862" class="furniture-33-frame-group427320849-wi">
+              <div id="n63725" class="furniture-33-text-tentang-kami9g1"><p class="furniture-33-text-tentang-kami9g2">Tentang kami</p></div>
+              <div id="n63726" class="furniture-33-text-we-touch-cd1"><p class="furniture-33-text-we-touch-cd2">We Touch With Colours</p></div>
+              <div id="n63727" class="furniture-33-text-advertisin-adalah-ne1">
+                <p class="furniture-33-text-advertisin-adalah-ne2">HERIEST CV. Advertising adalah perusahaan yang bergerak di bidang jasa advertising, printing, dan pembuatan media promosi. Kami hadir untuk membantu bisnis Anda tampil lebih profesional dan dikenal lebih luas dengan hasil karya berkualitas, pelayanan cepat, dan harga yang kompetitif.</p>
+              </div>
+              <div id="n63721" class="furniture-33-frame-group48095399-hk" onclick="switchUserPage('tentang', document.querySelector('[data-upage=tentang]'))">
+                <div id="n63722" class="furniture-33-text-more-info-kh1"><p class="furniture-33-text-more-info-kh2">More Info &rarr;</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="n63732" class="furniture-33-frame-group480954304s">
+          <div id="n63734" class="furniture-33-text-testimonia-qu1"><p class="furniture-33-text-testimonia-qu2">Testimonials</p></div>
+          <div id="n63733" class="furniture-33-text-review-pelanggan-tr1"><p class="furniture-33-text-review-pelanggan-tr2">Review Pelanggan</p></div>
+          <div class="testimonial-cards-row">
+            <div id="n63735" class="furniture-33-frame-group48095419-ft">
+              <img src="css/testimoni_1.png" alt="Testimoni 1" id="n63736" class="furniture-33-image-glowing-heriest-cw" />
+              <div id="n63737" class="furniture-33-frame-group480954261v">
+                <p class="furniture-33-text-ibuk-sukijan-um2">Ibuk Sukijan</p>
+                <p class="furniture-33-text-ibu-rumah5n2">Ibu Rumah Tangga</p>
+                <p class="furniture-33-text-makasih-panto-go2">“Makasih Heriest, usaha saya sekarang terlihat jauh lebih profesional dan menarik pelanggan“</p>
+                <span style="color: #f59e0b; font-size: 18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <div id="n63769" class="furniture-33-frame-group4809542738">
+              <img src="css/testimoni_2.png" alt="Testimoni 2" id="n63771" class="furniture-33-image-massive-heriest-h5" />
+              <div id="n63772" class="furniture-33-frame-group48095426e8">
+                <p class="furniture-33-text-bang-upin-k12">Bang Upin</p>
+                <p class="furniture-33-text-pedagang-asongan-v22">Pengusaha Kuliner</p>
+                <p class="furniture-33-text-terimakasi-banyak632">“Terimakasih banyak, kini toko saya menjadi lebih mencolok dan terlihat mewah“</p>
+                <span style="color: #f59e0b; font-size: 18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <div id="n63805" class="furniture-33-frame-group4809542003">
+              <img src="css/testimoni_3.png" alt="Testimoni 3" id="n63804" class="furniture-33-image-illuminate-heriest-b4" />
+              <div id="n63806" class="furniture-33-frame-group48095426p2">
+                <p class="furniture-33-text-mpok-ina-yx2">Mpok Ina</p>
+                <p class="furniture-33-text-karyawan-swasta9y2">Karyawan Swasta</p>
+                <p class="furniture-33-text-sangat-terjangkau-kz2">“Sangat terjangkau untuk kantong saya dengan hasil cetakan yang sangat tajam“</p>
+                <span style="color: #f59e0b; font-size: 18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+          </div>
+          <div id="n104106" class="furniture-33-text-lihat-semua0z1" onclick="switchUserPage('portofolio', document.querySelector('[data-upage=portofolio]'))" style="cursor: pointer;">
+            <p class="furniture-33-text-lihat-semua0z2">Lihat Semua &rarr;</p>
+          </div>
+        </div>
+
+        <div id="n120179" class="furniture-33-frame-group427320853-yz">
+          <div class="kontak-kiri-col">
+            <p class="furniture-33-text-kontak-kami-or2">Kontak Kami</p>
+            <p class="furniture-33-text-mari-diskusikan-zs2">Mari Diskusikan Proyek Visual Anda</p>
+            <p class="furniture-33-text-jangan-ragu5m2" style="margin-top: 16px;">
+              Punya ide brilian untuk kampanye iklan Anda? Tim kami siap membantu mewujudkannya. Jangan ragu untuk menghubungi kami melalui detail di bawah ini atau kirimkan pesan langsung.
+            </p>
+            <div id="n120188" class="furniture-33-frame-list-info-wv">
+              <div class="furniture-33-frame-item-kontak7w">
+                <div class="furniture-33-frame-background-border-su">&#128205;</div>
+                <div>
+                  <p class="furniture-33-text-kunjungi-kantor6s2">Kunjungi Kantor Kami</p>
+                  <p class="furniture-33-text-contoh-periklanan922">Jl. Letjen Suprapto 44 (Kompleks Café Monstera), Bondowoso</p>
+                </div>
+              </div>
+              <div class="furniture-33-frame-item-kontak-y1">
+                <div class="furniture-33-frame-background-border-ca">&#128222;</div>
+                <div>
+                  <p class="furniture-33-text-hubungi-kami9d2">Hubungi Kami</p>
+                  <p class="furniture-33-text62812-vf2">+62 823-3834-5777</p>
+                </div>
+              </div>
+              <div class="furniture-33-frame-item-kontak-si">
+                <div class="furniture-33-frame-background-border-hh">&#9993;</div>
+                <div>
+                  <p class="furniture-33-text-kirim-email-jz2">Kirim Email</p>
+                  <p class="furniture-33-text-com-xx2">hello@heriestadvertising.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div id="n115129" class="furniture-33-frame-kolom-kanan-pm">
+            <div id="n115131" class="furniture-33-frame-card-form-vz">
+              <p class="furniture-33-text-tinggalkan-pesan-f42">Tinggalkan Pesan</p>
+              <form id="n115135" class="furniture-33-frame-form43" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah terkirim ke tim Heriest Advertising.'); this.reset();">
+                <div class="furniture-33-frame-input-nama-t2">
+                  <label class="furniture-33-text-nama-lengkap-qs2">Nama Lengkap</label>
+                  <input type="text" required placeholder="John Doe" class="furniture-33-input-fr" />
+                </div>
+                <div class="furniture-33-frame-input-email3t">
+                  <div class="furniture-33-frame-container-eu">
+                    <label class="furniture-33-text-email-ss2">Email</label>
+                    <input type="email" required placeholder="john@example.com" class="furniture-33-input-vp" />
+                  </div>
+                  <div class="furniture-33-frame-container-ko">
+                    <label class="furniture-33-text-whats-app-y52">No. WhatsApp</label>
+                    <input type="text" required placeholder="0812-xxxx-xxxx" class="furniture-33-input-v8" />
+                  </div>
+                </div>
+                <div class="furniture-33-frame-input-layanan69">
+                  <label class="furniture-33-text-layanan-yang-sb2">Layanan yang Dibutuhkan</label>
+                  <select required class="furniture-33-frame-options-pe" style="font-family: Poppins; font-size: 15px; color: #1f2937;">
+                    <option value="">Pilih Layanan</option>
+                    <option value="Digital Printing & Banner">Digital Printing &amp; Banner</option>
+                    <option value="Laser Acrylic & Custom Craft">Laser Acrylic &amp; Custom Craft</option>
+                    <option value="Neon Box & Letter Sign 3D">Neon Box &amp; Letter Sign 3D</option>
+                    <option value="Cutting Sticker & Decal Vinyl">Cutting Sticker &amp; Decal Vinyl</option>
+                    <option value="CNC Router & Fasad ACP">CNC Router &amp; Fasad ACP</option>
+                    <option value="Baliho & Billboard">Baliho &amp; Billboard</option>
+                  </select>
+                </div>
+                <div class="furniture-33-frame-input-pesan-we">
+                  <label class="furniture-33-text-pesan-anda-ig2">Pesan Anda</label>
+                  <textarea required placeholder="Ceritakan detail proyek atau pertanyaan Anda di sini..." class="furniture-33-input-textarea-d9"></textarea>
+                </div>
+                <button type="submit" class="furniture-33-frame-tombol-submit-ac" style="border: none;">
+                  <span class="furniture-33-text-kirim-pesan-cm2">Kirim Pesan Sekarang</span>
                 </button>
-              </div>
-            </div>
-            <!-- LOGO NAVBAR -->
-            <img src="css/logo_heriest.png" alt="Logo Heriest" style="height: 65px; width: auto; object-fit: contain;" />
-          </div>
-          <div id="n63674" class="furniture-33-frame-yl">
-            <div id="n63675" class="furniture-33-frame9m">
-              <div id="n63676" class="furniture-33-text-tingkatkan-visibilita-kn1">
-                <p class="furniture-33-text-tingkatkan-visibilita-kn2">TINGKATKAN VISIBILITAS BISNIS ANDA BERSAMA KAMI!!</p>
-              </div>
-              <div id="n63677" class="furniture-33-text-we-touch-vo1">
-                <p class="furniture-33-text-we-touch-vo2">We Touch With Colours</p>
-              </div>
-            </div>
-            <div id="n63678" class="furniture-33-frame-mx" onclick="document.getElementById('n120179').scrollIntoView({behavior: 'smooth'})">
-              <div id="n63679" class="furniture-33-text-konsultasi-xy1"><p class="furniture-33-text-konsultasi-xy2">Konsultasi</p></div>
+              </form>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- BARIS LOGO BRAND PARTNER -->
-      <div class="brand-logos-bar">
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/github/000000" alt="GitHub" />
-          <span>GitHub</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/canva/000000" alt="Canva" />
-          <span style="font-style: italic; font-family: Georgia, serif;">Canva</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/spotify/000000" alt="Spotify" />
-          <span>Spotify</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/instagram/000000" alt="Instagram" />
-          <span style="font-style: italic; font-family: Georgia, serif;">Instagram</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/whatsapp/000000" alt="WhatsApp" />
-          <span>WhatsApp</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/notion/000000" alt="Notion" />
-          <span>Notion</span>
-        </div>
-        <div class="brand-item">
-          <span style="font-weight: 800; font-size: 36px; letter-spacing: -1px;">zoom</span>
-        </div>
-        <div class="brand-item">
-          <span style="font-style: italic; font-family: Georgia, serif; font-weight: 700; font-size: 34px;">dribbble</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/adobe/000000" alt="Adobe" />
-          <span>Adobe</span>
-        </div>
-        <div class="brand-item">
-          <span style="background: #000; color: #fff; padding: 4px 14px; font-weight: 700; font-size: 24px; letter-spacing: 1px;">Lenovo</span>
-        </div>
-        <div class="brand-item">
-          <img src="https://cdn.simpleicons.org/hubspot/000000" alt="HubSpot" />
-          <span>HubSpot</span>
-        </div>
-      </div>
+      <!-- =================================================================== -->
+      <!-- HALAMAN 2: PRODUK / KATALOG 10 LAYANAN                              -->
+      <!-- =================================================================== -->
+      <div id="user-page-produk" class="user-subpage" style="display: none;">
+        <div class="zaki-katalog-container">
+          <div class="zaki-header-flex">
+            <div>
+              <p class="zaki-kicker">KATALOG TERSTRUKTUR</p>
+              <h1 class="zaki-title">Eksplorasi Lengkap 10 Layanan Utama</h1>
+            </div>
+            <p class="zaki-subtitle">
+              Tiap kartu dilengkapi tombol interaktif untuk memeriksa spesifikasi bahan, pilihan finishing, dan rentang harga resmi.
+            </p>
+          </div>
 
-      <!-- 2. LAYANAN KAMI -->
-      <div id="n12297" class="furniture-33-frame-layanan-kami-we">
-        <div id="n63716" class="furniture-33-text-layanan-kami-cy1"><p class="furniture-33-text-layanan-kami-cy2">LAYANAN KAMI</p></div>
-        <div id="n63718" class="furniture-33-text-solusi-lengkap-qw1"><p class="furniture-33-text-solusi-lengkap-qw2">Solusi Lengkap Media Promosi</p></div>
-        <div id="n63719" class="furniture-33-text-solusi-cetak-fv1"><p class="furniture-33-text-solusi-cetak-fv2">Solusi cetak dan periklanan lengkap untuk bantu tingkatkan daya tarik bisnis Anda</p></div>
-        <div id="n63686" class="furniture-33-frame-rw">
-          <!-- Kartu 1: Neon Box -->
-          <div id="n63687" class="furniture-33-frame-gv">
-            <div id="n102277" class="furniture-33-frame-lw">
-              <div id="n102278" class="furniture-33-frame-d5">
-                <div id="n102279" class="furniture-33-text-neon-box-o61"><p class="furniture-33-text-neon-box-o62">Neon Box Custom</p></div>
-                <div id="n102280" class="furniture-33-text-bahan-akrilik521">
-                  <p class="furniture-33-text-bahan-akrilik522">Bentuk bulat, kotak, atau custom sesuai logo. Bahan akrilik tebal dengan LED Samsung waterproof.</p>
+          <div class="zaki-grid-3col">
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Outdoor &amp; Indoor</span>
+                <img src="css/layanankami_banner.png" alt="Digital Printing Resolusi Tinggi" />
+                <span class="zaki-tag-br">Mulai Rp 18.000 / m²</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">01 • CETAK BANNER &amp; SPANDUK</p>
+                <h3 class="zaki-card-title">Digital Printing Resolusi Tinggi</h3>
+                <p class="zaki-card-desc">Spanduk billboard, roll-up banner promosi, x-banner, kanvas foto, &amp; backlit neon dengan tinta solvent tahan cuaca Bondowoso.</p>
+                <div class="zaki-tabs"><span class="active">Bahan</span><span>Finishing</span><span>Estimasi</span></div>
+                <ul class="zaki-list">
+                  <li>Flexi Standar 280g &amp; 340g (Ekonomis)</li>
+                  <li>Flexi Korea 440g Tebal (Anti Sobek Outdoor)</li>
+                  <li>Albatros + Laminasi Doff/Glossy (Indoor)</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Estimasi Digital Printing: Mulai Rp 18.000/m² (Flexi 280g) s/d Rp 45.000/m² (Flexi Korea 440g).')">&#8862; Hitung Ukuran</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Digital Printing Resolusi Tinggi')">Pesan &rarr;</button>
                 </div>
               </div>
-              <div style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold;">&#8599;</div>
             </div>
-            <img src="css/layanankami_neonbox.png" alt="Neon Box" id="n63695" class="furniture-33-image-neon-box-kw" />
-          </div>
-          <!-- Kartu 2: Cetak Banner -->
-          <div id="n63696" class="furniture-33-frame-nt">
-            <div id="n63697" class="furniture-33-frame-yu">
-              <div id="n63698" class="furniture-33-frame-mf">
-                <div id="n63699" class="furniture-33-text-cetak-banner-xg1"><p class="furniture-33-text-cetak-banner-xg2">Cetak Banner</p></div>
-                <div id="n63700" class="furniture-33-text-ux1">
-                  <p class="furniture-33-text-ux2">Spanduk Flexi Korea, Jerman, Albatros, X-Banner &amp; Roll-Banner tajam resolusi tinggi.</p>
+
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Laser Presisi CO₂</span>
+                <img src="css/layanankami_huruftimbul.png" alt="Laser Acrylic & Custom Craft" />
+                <span class="zaki-tag-br">Marga Cipta Grade A</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">02 • PLAKAT &amp; DISPLAY AKRILIK</p>
+                <h3 class="zaki-card-title">Laser Acrylic &amp; Custom Craft</h3>
+                <p class="zaki-card-desc">Plakat penghargaan resmi, piala custom, nomor meja cafe QR code, display brosur toko, &amp; gantungan kunci suvenir orisinil.</p>
+                <div class="zaki-tabs"><span class="active">Tebal Bahan</span><span>Teknik</span><span>Ketahanan</span></div>
+                <div class="zaki-pills"><span>2mm</span><span>3mm</span><span>5mm</span><span>8mm - 20mm</span></div>
+                <p class="zaki-note">Bening kristal, susu, hitam, &amp; warna cermin (mirror).</p>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Spesifikasi Laser Acrylic: Potong & grafir presisi menggunakan akrilik Marga Cipta Grade A.')">&#9734; Spesifikasi Custom</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Laser Acrylic & Custom Craft')">Pesan &rarr;</button>
                 </div>
               </div>
-              <div style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold;">&#8599;</div>
             </div>
-            <img src="css/layanankami_banner.png" alt="Cetak Banner" id="n63704" class="furniture-33-image61b-s-mt" />
-          </div>
-          <!-- Kartu 3: Huruf Timbul -->
-          <div id="n63706" class="furniture-33-frame8v">
-            <div id="n63707" class="furniture-33-frame-jw">
-              <div id="n63708" class="furniture-33-frame-ep">
-                <div id="n63709" class="furniture-33-text-huruf-timbul-pq1"><p class="furniture-33-text-huruf-timbul-pq2">Huruf Timbul</p></div>
-                <div id="n63710" class="furniture-33-text741">
-                  <p class="furniture-33-text742">Stainless steel elegan, galvanis, kuningan mewah, serta akrilik dengan lampu backlit modern.</p>
+
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Best Seller Reklame</span>
+                <img src="css/layanankami_neonbox.png" alt="Neon Box & Letter Sign 3D" />
+                <span class="zaki-tag-br">LED IP65 Garansi</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">03 • IDENTITAS TOKO &amp; FASAD</p>
+                <h3 class="zaki-card-title">Neon Box &amp; Letter Sign 3D</h3>
+                <p class="zaki-card-desc">Neon box akrilik 2 sisi bulat/kotak, neon flex estetik, huruf timbul stainless mirror 304, &amp; galvanis cat oven menyala malam hari.</p>
+                <div class="zaki-tabs"><span class="active">Rangka</span><span>Lampu</span><span>Harga Acuan</span></div>
+                <ul class="zaki-list">
+                  <li>Frame aluminium profil anti karat</li>
+                  <li>Plat Stainless Mirror 0.8mm / Galvanis 0.7mm</li>
+                  <li>Akrilik susu 3mm penyebar cahaya merata</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Estimasi Neon Box & Letter Sign: Mulai Rp 1.500.000 (Neon Box) / Rp 12.000 per cm tinggi huruf timbul.')">&#8862; Hitung Ukuran</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Neon Box & Letter Sign 3D')">Pesan &rarr;</button>
                 </div>
               </div>
-              <div style="width: 60px; height: 60px; border-radius: 50%; border: 2px solid #000; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold;">&#8599;</div>
             </div>
-            <img src="css/layanankami_huruftimbul.png" alt="Huruf Timbul" id="n63715" class="furniture-33-image-tulisan3-nz" />
-          </div>
-        </div>
-      </div>
 
-      <!-- 3. ALUR KERJA KAMI -->
-      <div id="n99240" class="furniture-33-frame-pemesanan-sj">
-        <div id="n99246" class="furniture-33-frame-group427320852-yd">
-          <div id="n99252" class="furniture-33-text-alur-kerja-xw1"><p class="furniture-33-text-alur-kerja-xw2">Alur Kerja Kami</p></div>
-          <div id="n99255" class="furniture-33-text4-langkah8x1"><p class="furniture-33-text4-langkah8x2">4 langkah untuk memesan di heriest advertising</p></div>
-          <div id="n99251" class="furniture-33-text-oleh-karena0t1">
-            <p class="furniture-33-text-oleh-karena0t2">Kami menyadari waktu Anda sangat berharga untuk mengurus bisnis. Oleh karena itu, Heriest Advertising merancang sistem pelayanan dan pengerjaan yang praktis, transparan, dan minim hambatan. Dari tahap konsultasi ide hingga hasil cetak terpasang sempurna, semuanya dibuat mudah untuk Anda.</p>
-          </div>
-          <div id="n99247" class="furniture-33-frame-group480953999e">
-            <div id="n99248" class="furniture-33-text-lihat-cara-cb1"><p class="furniture-33-text-lihat-cara-cb2">Lihat Cara Pesan &rarr;</p></div>
-          </div>
-        </div>
-        <img src="css/alurkerjakami.jpeg" alt="4 Langkah Pemesanan" id="n99269" class="furniture-33-image-gemini-generated-fa" />
-      </div>
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Sticker Expert</span>
+                <img src="css/baground_beranda.jpeg" alt="Cutting Sticker & Decal Vinyl" />
+                <span class="zaki-tag-br">Oracal 651 Jerman</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">04 • STIKER ARMADA &amp; KACA</p>
+                <h3 class="zaki-card-title">Cutting Sticker &amp; Decal Vinyl</h3>
+                <p class="zaki-card-desc">Branding mobil box kantor, sandblast buram kaca partisi ruangan, stiker one way vision kaca ruko, &amp; scotlite reflektif.</p>
+                <div class="zaki-tabs"><span class="active">Bahan</span><span>Pemasangan</span><span>Daya Tahan</span></div>
+                <ul class="zaki-list">
+                  <li>Oracal 651 Glossy &amp; Matte (Asli Jerman)</li>
+                  <li>Sandblast Takikossai motif custom</li>
+                  <li>One Way Vision khusus kaca tampak luar</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Pilihan Warna Oracal 651: Lebih dari 60 warna doff & glossy tahan hingga 5 tahun.')">&#9673; Pilihan Warna</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Cutting Sticker & Decal Vinyl')">Pesan &rarr;</button>
+                </div>
+              </div>
+            </div>
 
-      <!-- 4. TENTANG KAMI -->
-      <div id="n63720" class="furniture-33-frame-tentang-kami6j">
-        <div id="n99239" class="furniture-33-frame-group427320850-hj">
-          <img src="css/baground_beranda.jpeg" alt="Tentang Heriest Advertising" id="n63731" class="furniture-33-image-oip17p" />
-          <div id="n9862" class="furniture-33-frame-group427320849-wi">
-            <div id="n63725" class="furniture-33-text-tentang-kami9g1"><p class="furniture-33-text-tentang-kami9g2">Tentang kami</p></div>
-            <div id="n63726" class="furniture-33-text-we-touch-cd1"><p class="furniture-33-text-we-touch-cd2">We Touch With Colours</p></div>
-            <div id="n63727" class="furniture-33-text-advertisin-adalah-ne1">
-              <p class="furniture-33-text-advertisin-adalah-ne2">HERIEST CV. Advertising adalah perusahaan yang bergerak di bidang jasa advertising, printing, dan pembuatan media promosi. Kami hadir untuk membantu bisnis Anda tampil lebih profesional dan dikenal lebih luas dengan hasil karya berkualitas, pelayanan cepat, dan harga yang kompetitif.</p>
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Fabrikasi CNC</span>
+                <img src="css/alurkerjakami.jpeg" alt="CNC Router & Instalasi Fasad ACP" />
+                <span class="zaki-tag-br">Seven PVDF 4mm</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">05 • CLADDING FASAD &amp; PARTISI</p>
+                <h3 class="zaki-card-title">CNC Router &amp; Instalasi Fasad ACP</h3>
+                <p class="zaki-card-desc">Pemasangan Aluminium Composite Panel (ACP) luar ruangan, pembentukan kisi-kisi partisi dekoratif masjid &amp; café, panel PVC motif 3D.</p>
+                <div class="zaki-tabs"><span class="active">Substrat</span><span>Area Kerja</span><span>Garansi</span></div>
+                <ul class="zaki-list">
+                  <li>ACP Seven PVDF (10 Thn Garansi Cat Luar)</li>
+                  <li>ACP Marks PE (Interior &amp; Ornamen)</li>
+                  <li>PVC Foam Board &amp; Kayu MDF tebal 5-18mm</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Spek Fasad ACP: Rangka besi hollow galvanis anti karat + sealant cuaca khusus eksterior.')">&#9874; Spek Fasad</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('CNC Router & Instalasi Fasad ACP')">Pesan &rarr;</button>
+                </div>
+              </div>
             </div>
-            <div id="n63721" class="furniture-33-frame-group48095399-hk">
-              <div id="n63722" class="furniture-33-text-more-info-kh1"><p class="furniture-33-text-more-info-kh2">More Info &rarr;</p></div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      <!-- 5. TESTIMONIALS -->
-      <div id="n63732" class="furniture-33-frame-group480954304s">
-        <div id="n63734" class="furniture-33-text-testimonia-qu1"><p class="furniture-33-text-testimonia-qu2">Testimonials</p></div>
-        <div id="n63733" class="furniture-33-text-review-pelanggan-tr1"><p class="furniture-33-text-review-pelanggan-tr2">Review Pelanggan</p></div>
-        <div class="testimonial-cards-row">
-          <div id="n63735" class="furniture-33-frame-group48095419-ft">
-            <img src="css/testimoni_1.png" alt="Testimoni 1" id="n63736" class="furniture-33-image-glowing-heriest-cw" />
-            <div id="n63737" class="furniture-33-frame-group480954261v">
-              <p class="furniture-33-text-ibuk-sukijan-um2">Ibuk Sukijan</p>
-              <p class="furniture-33-text-ibu-rumah5n2">Ibu Rumah Tangga</p>
-              <p class="furniture-33-text-makasih-panto-go2">“Makasih Heriest, usaha saya sekarang terlihat jauh lebih profesional dan menarik pelanggan“</p>
-              <span style="color: #f59e0b; font-size: 18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Tanpa Minimal Order</span>
+                <img src="css/testimoni_2.png" alt="Kaos DTF & Merchandise Promosi" />
+                <span class="zaki-tag-br">Satuan &amp; Lusinan</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">06 • SABLON TEKSTIL &amp; SOUVENIR</p>
+                <h3 class="zaki-card-title">Kaos DTF &amp; Merchandise Promosi</h3>
+                <p class="zaki-card-desc">Sablon Direct-to-Film warna cerah tanpa batas gradasi di kaos katun Combed 24s/30s, tote bag kanvas, topi, lanyard ID card, &amp; mug keramik.</p>
+                <div class="zaki-tabs"><span class="active">Bahan Kaos</span><span>Keunggulan DTF</span><span>Harga</span></div>
+                <ul class="zaki-list">
+                  <li>Cotton Combed 24s (Tebal &amp; Nyaman)</li>
+                  <li>Cotton Combed 30s (Standar Distro Lembut)</li>
+                  <li>Ukuran lengkap: S, M, L, XL, XXL s.d 4XL</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Harga Kaos DTF: Mulai Rp 65.000/pcs untuk satuan, harga khusus untuk komunitas/event.')">&#9863; Hitung Jumlah</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Kaos DTF & Merchandise Promosi')">Pesan &rarr;</button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div id="n63769" class="furniture-33-frame-group4809542738">
-            <img src="css/testimoni_2.png" alt="Testimoni 2" id="n63771" class="furniture-33-image-massive-heriest-h5" />
-            <div id="n63772" class="furniture-33-frame-group48095426e8">
-              <p class="furniture-33-text-bang-upin-k12">Bang Upin</p>
-              <p class="furniture-33-text-pedagang-asongan-v22">Pengusaha Kuliner</p>
-              <p class="furniture-33-text-terimakasi-banyak632">“Terimakasih banyak, kini toko saya menjadi lebih mencolok dan terlihat mewah“</p>
-              <span style="color: #f59e0b; font-size: 18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-          </div>
-          <div id="n63805" class="furniture-33-frame-group4809542003">
-            <img src="css/testimoni_3.png" alt="Testimoni 3" id="n63804" class="furniture-33-image-illuminate-heriest-b4" />
-            <div id="n63806" class="furniture-33-frame-group48095426p2">
-              <p class="furniture-33-text-mpok-ina-yx2">Mpok Ina</p>
-              <p class="furniture-33-text-karyawan-swasta9y2">Karyawan Swasta</p>
-              <p class="furniture-33-text-sangat-terjangkau-kz2">“Sangat terjangkau untuk kantong saya dengan hasil cetakan yang sangat tajam“</p>
-              <span style="color: #f59e0b; font-size: 18px;">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            </div>
-          </div>
-        </div>
-        <div id="n104106" class="furniture-33-text-lihat-semua0z1"><p class="furniture-33-text-lihat-semua0z2">Lihat Semua &rarr;</p></div>
-      </div>
 
-      <!-- 6. KONTAK KAMI -->
-      <div id="n120179" class="furniture-33-frame-group427320853-yz">
-        <div class="kontak-kiri-col">
-          <p class="furniture-33-text-kontak-kami-or2">Kontak Kami</p>
-          <p class="furniture-33-text-mari-diskusikan-zs2">Mari Diskusikan Proyek Visual Anda</p>
-          <p class="furniture-33-text-jangan-ragu5m2" style="margin-top: 16px;">
-            Punya ide brilian untuk kampanye iklan Anda? Tim kami siap membantu mewujudkannya. Jangan ragu untuk menghubungi kami melalui detail di bawah ini atau kirimkan pesan langsung.
-          </p>
-          <div id="n120188" class="furniture-33-frame-list-info-wv">
-            <div class="furniture-33-frame-item-kontak7w">
-              <div class="furniture-33-frame-background-border-su">&#128205;</div>
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Sahabat UMKM</span>
+                <img src="css/layanankami_banner.png" alt="Cetak Stiker Label A3+ Potong Pola" />
+                <span class="zaki-tag-br">Kiss Cut Siap Tempel</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">07 • KEMASAN MAKANAN &amp; BOTOL</p>
+                <h3 class="zaki-card-title">Cetak Stiker Label A3+ Potong Pola</h3>
+                <p class="zaki-card-desc">Label botol minuman, standing pouch snack, toples kue, kosmetik, &amp; frozen food tahan air es. Sudah termasuk potong pola bulat/kotak/custom.</p>
+                <div class="zaki-tabs"><span class="active">Pilihan Bahan</span><span>Tipe Potong</span><span>Harga Lembar</span></div>
+                <ul class="zaki-list">
+                  <li>Vinyl Waterproof (Anti sobek &amp; tahan freezer)</li>
+                  <li>Chromo Glossy Ekonomis (Produk kemasan kering)</li>
+                  <li>Transparan &amp; Hologram Pelangi Mewah</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Cetak Stiker A3+: Mulai Rp 8.500/lembar A3+ termasuk cutting pola Kiss Cut.')">&#8862; Hitung Lembar</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Cetak Stiker Label A3+ Potong Pola')">Pesan &rarr;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Direct to Substrate</span>
+                <img src="css/alurkerjakami.jpeg" alt="Printing UV Flatbed & Emboss" />
+                <span class="zaki-tag-br">Tebal s.d 10cm</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">08 • MEDIA KERAS &amp; MERCHANDISE</p>
+                <h3 class="zaki-card-title">Printing UV Flatbed &amp; Emboss</h3>
+                <p class="zaki-card-desc">Cetak foto &amp; logo langsung di media padat: tumbler stainless, casing HP, kayu jati belanda, kaca tempered, kulit sintetis, &amp; kartu e-money.</p>
+                <div class="zaki-tabs"><span class="active">Keunggulan</span><span>Substrat</span><span>Ketahanan</span></div>
+                <p class="zaki-note">Tinta langsung kering instan terkena sinar UV LED, menghasilkan tekstur timbul (emboss) dan lapisan varnish glossy mewah.</p>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Spek UV Flatbed: Resolusi cetak 1440 dpi pada media datar ketebalan maksimal 10 cm.')">&#10697; Spek Substrat</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Printing UV Flatbed & Emboss')">Pesan &rarr;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Free Antar Kota</span>
+                <img src="css/testimoni_1.png" alt="Bunga Papan & Standing Ucapan" />
+                <span class="zaki-tag-br">Foto Bukti Lokasi</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">10 • UCAPAN SELAMAT &amp; DUKA</p>
+                <h3 class="zaki-card-title">Bunga Papan &amp; Standing Ucapan</h3>
+                <p class="zaki-card-desc">Papan ucapan Selamat &amp; Sukses, Grand Opening, Pelantikan Pejabat, Pernikahan, &amp; Duka Cita. Rangkaian bunga rapi siap antar tepat waktu.</p>
+                <div class="zaki-tabs"><span class="active">Dimensi</span><span>Rangkaian</span><span>Pengiriman</span></div>
+                <ul class="zaki-list">
+                  <li>Standar: 2.0m x 1.2m</li>
+                  <li>Jumbo Double: 2.5m x 1.5m / Gandeng</li>
+                  <li>Huruf foam timbul presisi terbaca jelas</li>
+                </ul>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Papan Ucapan: Gratis antar area Kota Bondowoso + laporan foto di lokasi acara.')">&#9825; Pilih Ucapan</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Bunga Papan & Standing Ucapan')">Pesan &rarr;</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="zaki-card">
+              <div class="zaki-img-wrap">
+                <span class="zaki-tag-tl">Konstruksi Berat</span>
+                <img src="css/baground_beranda.jpeg" alt="Baliho, Billboard & Konstruksi Besi" />
+                <span class="zaki-tag-br">Izin &amp; Pasang</span>
+              </div>
+              <div class="zaki-body">
+                <p class="zaki-code">09 • OUTDOOR ADVERTISING</p>
+                <h3 class="zaki-card-title">Baliho, Billboard &amp; Konstruksi Besi</h3>
+                <p class="zaki-card-desc">Konstruksi tiang pipa besi galvanis medium, lampu sorot LED floodlight otomatis malam, pemeliharaan visual berkala, &amp; bantuan izin reklame.</p>
+                <div class="zaki-tabs"><span class="active">Pipa Rangka</span><span>Pencahayaan</span><span>Survei</span></div>
+                <p class="zaki-note">Pipa medium galvanis 3 - 6 Inch tahan terpaan angin kencang, pondasi cor beton dalam dengan angkur baja.</p>
+                <div class="zaki-actions">
+                  <button type="button" class="zaki-btn-spec" onclick="alert('Spek Billboard: Survei lokasi, kalkulasi struktur angin, serta pengurusan izin reklame.')">&#9874; Spek Konstruksi</button>
+                  <button type="button" class="zaki-btn-order" onclick="orderService('Baliho, Billboard & Konstruksi Besi')">Pesan &rarr;</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="zaki-showroom-box">
+            <div class="zaki-showroom-top">
               <div>
-                <p class="furniture-33-text-kunjungi-kantor6s2">Kunjungi Kantor Kami</p>
-                <p class="furniture-33-text-contoh-periklanan922">Jl. Contoh Periklanan No. 123, Kota Bisnis, Indonesia 12345</p>
+                <span class="zaki-showroom-badge">&#128205; 2 LOKASI TERPADU DI JANTUNG BONDOWOSO</span>
+                <h2>Kunjungi Showroom Sampel atau Minta Tim Kami Datang Survey</h2>
+              </div>
+              <div class="zaki-showroom-right">
+                <a href="https://wa.me/6282338345777" target="_blank" class="zaki-wa-btn">&#128172; Chat WhatsApp 082 338 345 777</a>
+                <p class="zaki-admin-phones">Admin / Management: 0811 3028 500 • 0852 3607 3259</p>
+                <p class="zaki-slogan-yellow">Slogan: Pesanan Langsung Kami Antar</p>
               </div>
             </div>
-            <div class="furniture-33-frame-item-kontak-y1">
-              <div class="furniture-33-frame-background-border-ca">&#128222;</div>
-              <div>
-                <p class="furniture-33-text-hubungi-kami9d2">Hubungi Kami</p>
-                <p class="furniture-33-text62812-vf2">+62 812 3456 7890</p>
+            <div class="zaki-showroom-grid2">
+              <div class="zaki-loc-item">
+                <h4>Showroom &amp; Kantor Utama:</h4>
+                <p>Jl. Letjen Suprapto 44 (Kompleks Café Monstera), Bondowoso</p>
+                <span>Konsultasi bahan, katalog stiker, sampel plakat akrilik &amp; display.</span>
               </div>
-            </div>
-            <div class="furniture-33-frame-item-kontak-si">
-              <div class="furniture-33-frame-background-border-hh">&#9993;</div>
-              <div>
-                <p class="furniture-33-text-kirim-email-jz2">Kirim Email</p>
-                <p class="furniture-33-text-com-xx2">hello@heriestadvertising.com</p>
+              <div class="zaki-loc-item">
+                <h4>Workshop Fabrikasi &amp; Mesin:</h4>
+                <p>Jl. RBA Ki Ronggo 777 A (Kompleks Café Sekarwhite), Bondowoso</p>
+                <span>Area mesin digital print besar, laser CO₂, CNC router, &amp; perakitan neon box.</span>
               </div>
             </div>
           </div>
         </div>
+      </div>
 
-        <div id="n115129" class="furniture-33-frame-kolom-kanan-pm">
-          <div id="n115131" class="furniture-33-frame-card-form-vz">
-            <p class="furniture-33-text-tinggalkan-pesan-f42">Tinggalkan Pesan</p>
-            <form id="n115135" class="furniture-33-frame-form43" onsubmit="event.preventDefault(); alert('Terima kasih! Pesan Anda telah terkirim.'); this.reset();">
-              <div class="furniture-33-frame-input-nama-t2">
-                <label class="furniture-33-text-nama-lengkap-qs2">Nama Lengkap</label>
-                <input type="text" required placeholder="John Doe" class="furniture-33-input-fr" />
-              </div>
-              <div class="furniture-33-frame-input-email3t">
-                <div class="furniture-33-frame-container-eu">
-                  <label class="furniture-33-text-email-ss2">Email</label>
-                  <input type="email" required placeholder="john@example.com" class="furniture-33-input-vp" />
+      <!-- =================================================================== -->
+      <!-- HALAMAN 3: PORTOFOLIO                                               -->
+      <!-- =================================================================== -->
+      <div id="user-page-portofolio" class="user-subpage" style="display: none;">
+        <div class="ferdi-porto-container">
+          <div class="ferdi-header-center">
+            <h1>KATALOG PORTOFOLIO TERKURASI</h1>
+            <div class="ferdi-red-line"></div>
+          </div>
+
+          <div class="ferdi-grid-3col">
+            <div class="ferdi-item">
+              <img src="css/layanankami_neonbox.png" alt="Neon Box Bank BRI" class="ferdi-photo" />
+              <div class="ferdi-caption-box" onclick="orderService('Neon Box Bank BRI')">
+                <div class="ferdi-cap-top">
+                  <span class="ferdi-cap-kicker">01 / PT BANK RAKYAT INDONESIA</span>
+                  <span class="ferdi-cap-arrow">&#8599;</span>
                 </div>
-                <div class="furniture-33-frame-container-ko">
-                  <label class="furniture-33-text-whats-app-y52">No. WhatsApp</label>
-                  <input type="text" required placeholder="0812-xxxx-xxxx" class="furniture-33-input-v8" />
+                <h3>neon box Bank BRI</h3>
+                <p>Pemasangan media luar ruang berukuran besar di titik strategis perempatan pusat kota dengan volume lalu lintas tinggi.</p>
+              </div>
+            </div>
+
+            <div class="ferdi-item">
+              <img src="css/baground_beranda.jpeg" alt="Billboard Promo Ramadhan" class="ferdi-photo" />
+              <div class="ferdi-caption-box" onclick="orderService('Billboard Promo Ramadhan')">
+                <div class="ferdi-cap-top">
+                  <span class="ferdi-cap-kicker">02 / SIRUP MARJAN</span>
+                  <span class="ferdi-cap-arrow">&#8599;</span>
                 </div>
+                <h3>Billboard Promo Ramadhan</h3>
+                <p>Pemasangan media luar ruang berukuran besar di titik strategis perempatan pusat kota dengan volume lalu lintas tinggi.</p>
               </div>
-              <div class="furniture-33-frame-input-layanan69">
-                <label class="furniture-33-text-layanan-yang-sb2">Layanan yang Dibutuhkan</label>
-                <select required class="furniture-33-frame-options-pe" style="font-family: Poppins; font-size: 15px; color: #1f2937;">
-                  <option value="">Pilih Layanan</option>
-                  <option value="Neon Box Custom">Neon Box Custom</option>
-                  <option value="Cetak Banner">Cetak Banner</option>
-                  <option value="Huruf Timbul">Huruf Timbul</option>
-                </select>
+            </div>
+
+            <div class="ferdi-item">
+              <img src="css/testimoni_2.png" alt="Branding Mobil Box - Indokargo" class="ferdi-photo" />
+              <div class="ferdi-caption-box" onclick="orderService('Branding Mobil Box - Indokargo')">
+                <div class="ferdi-cap-top">
+                  <span class="ferdi-cap-kicker">03 / INDOKARGO</span>
+                  <span class="ferdi-cap-arrow">&#8599;</span>
+                </div>
+                <h3>Branding Mobil Box - Indokargo</h3>
+                <p>transformasi visual armada logistik menjadi media promosi berjalan(moving billboard).</p>
               </div>
-              <div class="furniture-33-frame-input-pesan-we">
-                <label class="furniture-33-text-pesan-anda-ig2">Pesan Anda</label>
-                <textarea required placeholder="Ceritakan detail proyek atau pertanyaan Anda di sini..." class="furniture-33-input-textarea-d9"></textarea>
+            </div>
+
+            <div class="ferdi-item">
+              <img src="css/alurkerjakami.jpeg" alt="Desain & Konstruksi Booth Pameran Custom" class="ferdi-photo" />
+              <div class="ferdi-caption-box" onclick="orderService('Desain & Konstruksi Booth Pameran Custom')">
+                <div class="ferdi-cap-top">
+                  <span class="ferdi-cap-kicker">04 / PERUSAHAAN IT</span>
+                  <span class="ferdi-cap-arrow">&#8599;</span>
+                </div>
+                <h3>Desain &amp; Konstruksi Booth Pameran Custom</h3>
+                <p>pembuatan stand booth pameran custom untuk acara pameran tech booth</p>
               </div>
-              <button type="submit" class="furniture-33-frame-tombol-submit-ac" style="border: none;">
-                <span class="furniture-33-text-kirim-pesan-cm2">Kirim Pesan Sekarang</span>
+            </div>
+
+            <div class="ferdi-item">
+              <img src="css/layanankami_banner.png" alt="Baliho Raksasa" class="ferdi-photo" />
+              <div class="ferdi-caption-box" onclick="orderService('Baliho Raksasa')">
+                <div class="ferdi-cap-top">
+                  <span class="ferdi-cap-kicker">05 / EVENT MUSIK - LYODRA</span>
+                  <span class="ferdi-cap-arrow">&#8599;</span>
+                </div>
+                <h3>Baliho Raksasa</h3>
+                <p>Produksi cetak dan instalasi baliho berukuran ekstra besar(giant banner)di titik strategis kota.</p>
+              </div>
+            </div>
+
+            <div class="ferdi-cta-red-card">
+              <p class="ferdi-cta-sub">Heriest Advertising sudah dipercaya oleh beberapa brand besar</p>
+              <h3 class="ferdi-cta-main">Ayo tingkatkan bisnismu bersama kami !!</h3>
+              <button type="button" class="ferdi-cta-btn" onclick="goToKontakBeranda()">Hubungi Kami</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =================================================================== -->
+      <!-- HALAMAN 4: FAQ                                                      -->
+      <!-- =================================================================== -->
+      <div id="user-page-faq" class="user-subpage" style="display: none;">
+        <div class="faq-hero-banner">
+          <h1>Frequently Asked<br />Questions</h1>
+          <p>Temukan jawaban cepat untuk kebutuhan layanan advertising &amp; percetakan Anda.<br />Butuh bantuan lebih lanjut? Kami selalu di sini untuk membantu.</p>
+        </div>
+
+        <div class="faq-body-container">
+          <div class="faq-search-wrapper">
+            <span class="faq-search-icon">&#128269;</span>
+            <input type="text" id="faq-search-input" onkeyup="filterFaqItems()" placeholder="Cari pertanyaan disini ...." />
+          </div>
+
+          <div class="faq-two-col">
+            <div class="faq-left-cats">
+              <button type="button" class="faq-cat-btn active" onclick="selectFaqCat('pemesanan', this)">
+                <span class="faq-cat-ico">&#128179;</span>
+                <span>Pemesanan &amp; Pembayaran</span>
               </button>
-            </form>
+              <button type="button" class="faq-cat-btn" onclick="selectFaqCat('pengiriman', this)">
+                <span class="faq-cat-ico">&#9992;</span>
+                <span>Pengiriman &amp; Instalasi</span>
+              </button>
+              <button type="button" class="faq-cat-btn" onclick="selectFaqCat('revisi', this)">
+                <span class="faq-cat-ico">&#8635;</span>
+                <span>Kebijakan Pengembalian &amp; Revisi</span>
+              </button>
+              <button type="button" class="faq-cat-btn" onclick="selectFaqCat('garansi', this)">
+                <span class="faq-cat-ico">&#128737;</span>
+                <span>Perawatan &amp; Garansi Produk</span>
+              </button>
+              <button type="button" class="faq-cat-btn" onclick="goToKontakBeranda()">
+                <span class="faq-cat-ico">&#128222;</span>
+                <span>Hubungi Kami</span>
+              </button>
+            </div>
+
+            <div class="faq-right-accordion" id="faq-accordion-list">
+              <div class="faq-acc-row open" onclick="toggleFaqRow(this)">
+                <div class="faq-acc-head">
+                  <h4>Apakah pembuatan Neon Box &amp; Billboard sudah termasuk jasa pemasangan?</h4>
+                  <span class="faq-acc-circle">&times;</span>
+                </div>
+                <p class="faq-acc-body">
+                  Sebagian besar proyek reklame luar ruang kami sudah termasuk survei lokasi dan perakitan penuh. Untuk ukuran besar seperti Neon Box fasad, Huruf Timbul, dan Billboard, tim teknisi kami akan memasangkannya langsung di lokasi usaha Anda.
+                </p>
+              </div>
+
+              <div class="faq-acc-row" onclick="toggleFaqRow(this)">
+                <div class="faq-acc-head">
+                  <h4>Metode pembayaran apa saja yang diterima?</h4>
+                  <span class="faq-acc-circle">+</span>
+                </div>
+                <p class="faq-acc-body">
+                  Kami menerima pembayaran melalui transfer bank (BCA, BRI, Mandiri), QRIS, maupun pembayaran tunai langsung di Showroom Jl. Letjen Suprapto 44 Bondowoso dengan sistem DP 50% untuk produksi custom.
+                </p>
+              </div>
+
+              <div class="faq-acc-row" onclick="toggleFaqRow(this)">
+                <div class="faq-acc-head">
+                  <h4>Apakah saya bisa memesan media promosi dengan ukuran dan desain kustom?</h4>
+                  <span class="faq-acc-circle">+</span>
+                </div>
+                <p class="faq-acc-body">
+                  Tentu saja! Semua layanan mulai dari Neon Box, Huruf Timbul Akrilik/Stainless, Plakat Laser, hingga Stiker Kemasan dapat disesuaikan sepenuhnya dengan ukuran, warna brand, dan bentuk logo bisnis Anda.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
-      <!-- 7. FOOTER -->
+      <!-- =================================================================== -->
+      <!-- HALAMAN 5: TENTANG KAMI                                             -->
+      <!-- =================================================================== -->
+      <div id="user-page-tentang" class="user-subpage" style="display: none;">
+        <div class="sarah-band-red">
+          <div class="sarah-inner-2col">
+            <div class="sarah-red-text">
+              <span class="sarah-kicker-white">TENTANG KAMI</span>
+              <h1>Bukan hanya sekedar percetakan</h1>
+              <p>
+                Heriest Advertising hadir sebagai solusi terbaik anda dalam menghasilkan media promosi yang relevan dengan usaha anda, kekinian, dan tahan lama. Kami percaya bahwa setiap usaha memiliki keunikan dan ciri khas tersendiri untuk diwujudkan
+              </p>
+            </div>
+            <div class="sarah-red-img-wrap">
+              <img src="css/layanankami_huruftimbul.png" alt="Fasad Huruf Timbul Heriest" />
+            </div>
+          </div>
+        </div>
+
+        <div class="sarah-band-black">
+          <div class="sarah-black-inner">
+            <div class="sarah-black-top">
+              <img src="css/logo_heriest.png" alt="HERIEST CV. ADVERTISING" class="sarah-big-logo" />
+              <span class="sarah-kicker-red">TENTANG KAMI</span>
+            </div>
+            <div class="sarah-black-bottom">
+              <p>
+                Heriest Advertising telah hadir di Bondowoso sejak 2009 sebagai penyedia layanan advertising yang mengutamakan kreativitas, inovasi, dan kualitas. Kami berkomitmen menghadirkan hasil cetak berkualitas, warna tajam, bahan tahan lama, serta pelayanan desain yang fleksibel sesuai kebutuhan pelanggan. Dengan prinsip “Ada Harga, Ada Kualitas”, kami siap menjadi partner promosi yang kreatif, inovatif, dan solutif bagi bisnis Anda.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="sarah-band-white-pad">
+          <div class="sarah-yellow-box">
+            <span class="sarah-yellow-kicker">NILAI KAMI</span>
+            <h2 class="sarah-yellow-title">Mengapa harus Heriest?</h2>
+
+            <div class="sarah-4cols">
+              <div class="sarah-val-item">
+                <div class="sarah-val-icon">&#9881;</div>
+                <h4>One Stop Service</h4>
+                <p>Beragam kebutuhan percetakan dan promosi dalam satu tempat.</p>
+              </div>
+              <div class="sarah-val-item">
+                <div class="sarah-val-icon">&#127942;</div>
+                <h4>Berpengalaman</h4>
+                <p>Melayani kebutuhan advertising sejak 2009.</p>
+              </div>
+              <div class="sarah-val-item">
+                <div class="sarah-val-icon">&#9745;</div>
+                <h4>Kualitas Terjamin</h4>
+                <p>Hasil cetak tajam, warna pekat, dan bahan lebih tebal.</p>
+              </div>
+              <div class="sarah-val-item">
+                <div class="sarah-val-icon">&#128196;</div>
+                <h4>Solusi Fleksibel</h4>
+                <p>Konsep dan desain menyesuaikan kebutuhan pelanggan.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sarah-band-white-pad" style="padding-top: 20px;">
+          <div class="sarah-inner-2col">
+            <div class="sarah-bersama-left">
+              <span class="sarah-kicker-red">BERSAMA KAMI</span>
+              <h2>Promosi Bisnis<br />Anda, Prioritas Kami</h2>
+              <p>
+                Di Heriest Advertising, kami tidak hanya membuat media promosi, tetapi juga membantu mewujudkan ide menjadi karya yang menarik dan berkualitas. Karena kami percaya, promosi tepat bukan sekadar memperkenalkan bisnis, tetapi juga membangun kesan dan kepercayaan pelanggan.
+              </p>
+              <div class="sarah-red-arrow-link" onclick="switchUserPage('produk', document.querySelector('[data-upage=produk]'))">
+                <span class="sarah-line"></span>
+                <span class="sarah-chev">&raquo;</span>
+              </div>
+            </div>
+            <div class="sarah-bersama-img-wrap">
+              <img src="css/layanankami_neonbox.png" alt="Neon Box Kafe" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER UTAMA -->
       <div id="n63838" class="furniture-33-frame-bz">
         <div class="footer-top-grid">
           <div class="footer-brand-col">
@@ -316,11 +915,11 @@
           <div id="n63860" class="furniture-33-frame62">
             <div>
               <p class="furniture-33-text-navigation-s42">Navigation</p>
-              <p class="furniture-33-text-service-agency-h32">Service</p>
-              <p class="furniture-33-text-service-agency-h33">Agency</p>
-              <p class="furniture-33-text-service-agency-h34">Case Study</p>
-              <p class="furniture-33-text-service-agency-h35">Resource</p>
-              <p class="furniture-33-text-service-agency-h36">Contact</p>
+              <p class="furniture-33-text-service-agency-h32" style="cursor: pointer;" onclick="switchUserPage('beranda', document.querySelector('[data-upage=beranda]'))">Beranda</p>
+              <p class="furniture-33-text-service-agency-h33" style="cursor: pointer;" onclick="switchUserPage('produk', document.querySelector('[data-upage=produk]'))">Produk</p>
+              <p class="furniture-33-text-service-agency-h34" style="cursor: pointer;" onclick="switchUserPage('portofolio', document.querySelector('[data-upage=portofolio]'))">Portofolio</p>
+              <p class="furniture-33-text-service-agency-h35" style="cursor: pointer;" onclick="switchUserPage('faq', document.querySelector('[data-upage=faq]'))">FAQ</p>
+              <p class="furniture-33-text-service-agency-h36" style="cursor: pointer;" onclick="switchUserPage('tentang', document.querySelector('[data-upage=tentang]'))">Tentang Kami</p>
             </div>
             <div>
               <p class="furniture-33-text-licence352">Licence</p>
@@ -330,15 +929,15 @@
             </div>
             <div>
               <p class="furniture-33-text-contact-ma2">Contact</p>
-              <p class="furniture-33-text406555b92">(406) 555-0120</p>
-              <p class="furniture-33-text-com-f72">Hey@boostim.com</p>
-              <p class="furniture-33-text-santa-ana-q82">2972 Westheimer Rd. Santa Ana, Illinois 85486</p>
+              <p class="furniture-33-text406555b92">082 338 345 777</p>
+              <p class="furniture-33-text-com-f72">hello@heriestadvertising.com</p>
+              <p class="furniture-33-text-santa-ana-q82">Jl. Letjen Suprapto 44 (Kompleks Café Monstera), Bondowoso</p>
             </div>
           </div>
         </div>
         <hr id="n63840" class="furniture-33-frame-line1-ug" />
         <div id="n63839" class="furniture-33-text-hariest-advertaisi-n01" style="display: flex; justify-content: space-between; align-items: center;">
-          <p class="furniture-33-text-hariest-advertaisi-n02">Heriest advertising 2026</p>
+          <p class="furniture-33-text-hariest-advertaisi-n02">Heriest advertaising 2026</p>
           <a href="javascript:void(0)" onclick="openAdminLogin()" style="color: #9b9b9c; font-size: 18px; text-decoration: underline;">Portal Admin</a>
         </div>
       </div>
@@ -347,7 +946,7 @@
   </div>
 
   <!-- ===================================================================== -->
-  <!-- VIEW 2: HALAMAN LOGIN ADMIN (SESUAI DESKTOP - 18)                     -->
+  <!-- VIEW 2: HALAMAN LOGIN ADMIN                                           -->
   <!-- ===================================================================== -->
   <div id="admin-login-view" style="display: none;">
     <div class="heriest-login-page">
@@ -385,19 +984,17 @@
   </div>
 
   <!-- ===================================================================== -->
-  <!-- VIEW 3: DASHBOARD ADMIN (SESUAI DESKTOP 20 - 24, 5 MENU BERISI)       -->
+  <!-- VIEW 3: DASHBOARD ADMIN                                               -->
   <!-- ===================================================================== -->
   <div id="admin-dashboard-view" style="display: none;">
     <div class="heriest-admin-container">
 
-      <!-- SIDEBAR KIRI (PUTIH BERSIH SESUAI DESAIN) -->
       <aside class="heriest-sidebar">
         <div class="heriest-sidebar-top">
           <div class="heriest-sidebar-brand">
             <img src="css/logo_heriest.png" alt="HERIEST CV. ADVERTISING" class="heriest-sidebar-logo" />
           </div>
 
-          <!-- 5 MENU UTAMA YANG ADA ISINYA -->
           <nav class="heriest-menu-list">
             <button type="button" class="heriest-menu-item active" data-page="ringkasan" onclick="switchAdminPage('ringkasan', this)">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
@@ -425,14 +1022,12 @@
             </button>
           </nav>
 
-          <!-- GRUP KONTEN WEB (MENU TAMBAHAN SESUAI SIDEBAR) -->
           <div class="heriest-menu-group">
             <p class="heriest-menu-group-title">KONTEN WEB</p>
             <button type="button" class="heriest-menu-subitem" onclick="switchAdminPage('kosong', this, 'Mitra &amp; Klien')">Mitra &amp; Klien</button>
             <button type="button" class="heriest-menu-subitem" onclick="switchAdminPage('kosong', this, 'Testimoni &amp; FAQ')">Testimoni &amp; FAQ</button>
           </div>
 
-          <!-- GRUP KONFIGURASI (MENU TAMBAHAN SESUAI SIDEBAR) -->
           <div class="heriest-menu-group">
             <p class="heriest-menu-group-title">KONFIGURASI</p>
             <button type="button" class="heriest-menu-subitem" onclick="switchAdminPage('kosong', this, 'Pengaturan Web')">Pengaturan Web</button>
@@ -441,7 +1036,6 @@
           </div>
         </div>
 
-        <!-- KARTU PROFIL BAWAH SIDEBAR -->
         <div class="heriest-sidebar-profile">
           <div class="heriest-profile-row">
             <div class="heriest-avatar-ah">AH</div>
@@ -456,10 +1050,7 @@
         </div>
       </aside>
 
-      <!-- AREA KONTEN KANAN -->
       <main class="heriest-main-area">
-        
-        <!-- TOPBAR HEADER -->
         <header class="heriest-topbar">
           <div>
             <h1 id="topbar-page-title" class="heriest-topbar-title">Dashbord ringkasan</h1>
@@ -476,12 +1067,7 @@
         </header>
 
         <div class="heriest-content-body">
-
-          <!-- =============================================================== -->
-          <!-- HALAMAN 1: DASHBORD RINGKASAN (DESKTOP - 20)                    -->
-          <!-- =============================================================== -->
           <section id="admin-sec-ringkasan" class="heriest-admin-sec">
-            <!-- Hero Banner Card -->
             <div class="heriest-hero-card">
               <div class="heriest-hero-glow"></div>
               <p class="heriest-hero-tagline">We Touch With Colours.</p>
@@ -490,116 +1076,41 @@
                 Kelola daftar etalase produk neon box, konstruksi billboard, huruf timbul akrilik, dan portofolio proyek terpasang secara instan dengan sinkronisasi ke WhatsApp.
               </p>
               <div class="heriest-hero-btns">
-                <button type="button" class="heriest-btn-red" onclick="switchAdminPage('produk', document.querySelector('[data-page=produk]'))">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                  Kelola 8+ Produk
-                </button>
-                <button type="button" class="heriest-btn-dark" onclick="switchAdminPage('portofolio', document.querySelector('[data-page=portofolio]'))">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
-                  Lihat Portofolio
-                </button>
+                <button type="button" class="heriest-btn-red" onclick="switchAdminPage('produk', document.querySelector('[data-page=produk]'))">Kelola 8+ Produk</button>
+                <button type="button" class="heriest-btn-dark" onclick="switchAdminPage('portofolio', document.querySelector('[data-page=portofolio]'))">Lihat Portofolio</button>
               </div>
             </div>
 
-            <!-- 6 KARTU STATISTIK (GRID 3x2) -->
             <div class="heriest-stats-grid">
-              <div class="heriest-stat-box">
-                <p class="s-title">Total Produk Etalase</p>
-                <p class="s-num" id="dash-stat-produk">8</p>
-                <p class="s-sub">Aktif di bagian "Banyak Dipesan"</p>
-              </div>
-              <div class="heriest-stat-box">
-                <p class="s-title">PRODUK TAYANG</p>
-                <p class="s-num">8</p>
-                <p class="s-sub">Mundul di website</p>
-              </div>
-              <div class="heriest-stat-box">
-                <p class="s-title">KATEGORI</p>
-                <p class="s-num" id="dash-stat-kategori">8</p>
-                <p class="s-sub">kategori layanan</p>
-              </div>
-              <div class="heriest-stat-box">
-                <p class="s-title">WHATSAPP</p>
-                <p class="s-num s-phone">087876543222</p>
-                <p class="s-sub">Ubah nomor</p>
-              </div>
-              <div class="heriest-stat-box">
-                <p class="s-title">KLIK WHATSAPP</p>
-                <p class="s-num">8</p>
-                <p class="s-sub">+8 dalam 7 hari</p>
-              </div>
-              <div class="heriest-stat-box">
-                <p class="s-title">TOTAL PORTOFOLIO</p>
-                <p class="s-num">8</p>
-                <p class="s-sub">kelola portofolio</p>
-              </div>
+              <div class="heriest-stat-box"><p class="s-title">Total Produk Etalase</p><p class="s-num">8</p><p class="s-sub">Aktif di bagian "Banyak Dipesan"</p></div>
+              <div class="heriest-stat-box"><p class="s-title">PRODUK TAYANG</p><p class="s-num">8</p><p class="s-sub">Mundul di website</p></div>
+              <div class="heriest-stat-box"><p class="s-title">KATEGORI</p><p class="s-num">8</p><p class="s-sub">kategori layanan</p></div>
+              <div class="heriest-stat-box"><p class="s-title">WHATSAPP</p><p class="s-num s-phone">087876543222</p><p class="s-sub">Ubah nomor</p></div>
+              <div class="heriest-stat-box"><p class="s-title">KLIK WHATSAPP</p><p class="s-num">8</p><p class="s-sub">+8 dalam 7 hari</p></div>
+              <div class="heriest-stat-box"><p class="s-title">TOTAL PORTOFOLIO</p><p class="s-num">8</p><p class="s-sub">kelola portofolio</p></div>
             </div>
 
-            <!-- DAFTAR PRODUK RINGKASAN BAWAH -->
             <div class="heriest-list-card">
               <div class="heriest-list-row">
-                <div class="heriest-list-left">
-                  <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-list-thumb" />
-                  <div>
-                    <p class="heriest-list-name">Neon Box Akrilik 2 Muka</p>
-                    <p class="heriest-list-cat">Neon Box</p>
-                  </div>
-                </div>
-                <div class="heriest-list-right">
-                  <p class="heriest-price-gold">Rp 1.750.000</p>
-                  <span class="heriest-pill-pink">Terlaris</span>
-                </div>
+                <div class="heriest-list-left"><img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-list-thumb" /><div><p class="heriest-list-name">Neon Box Akrilik 2 Muka</p><p class="heriest-list-cat">Neon Box</p></div></div>
+                <div class="heriest-list-right"><p class="heriest-price-gold">Rp 1.750.000</p><span class="heriest-pill-pink">Terlaris</span></div>
               </div>
-
               <div class="heriest-list-row">
-                <div class="heriest-list-left">
-                  <img src="css/baground_beranda.jpeg" alt="Billboard" class="heriest-list-thumb" />
-                  <div>
-                    <p class="heriest-list-name">Billboard 4×8 Meter</p>
-                    <p class="heriest-list-cat">Billboard</p>
-                  </div>
-                </div>
-                <div class="heriest-list-right">
-                  <p class="heriest-price-gold">Rp 6.400.000</p>
-                  <span class="heriest-pill-pink">Diskon 20%</span>
-                </div>
+                <div class="heriest-list-left"><img src="css/baground_beranda.jpeg" alt="Billboard" class="heriest-list-thumb" /><div><p class="heriest-list-name">Billboard 4×8 Meter</p><p class="heriest-list-cat">Billboard</p></div></div>
+                <div class="heriest-list-right"><p class="heriest-price-gold">Rp 6.400.000</p><span class="heriest-pill-pink">Diskon 20%</span></div>
               </div>
-
               <div class="heriest-list-row">
-                <div class="heriest-list-left">
-                  <div class="heriest-thumb-letter">P</div>
-                  <div>
-                    <p class="heriest-list-name">Huruf Timbul Acrylic</p>
-                    <p class="heriest-list-cat">Huruf Timbul</p>
-                  </div>
-                </div>
-                <div class="heriest-list-right">
-                  <p class="heriest-price-gold">Rp 950.000/m¹</p>
-                  <span class="heriest-pill-pink">Terlaris</span>
-                </div>
+                <div class="heriest-list-left"><div class="heriest-thumb-letter">P</div><div><p class="heriest-list-name">Huruf Timbul Acrylic</p><p class="heriest-list-cat">Huruf Timbul</p></div></div>
+                <div class="heriest-list-right"><p class="heriest-price-gold">Rp 950.000/m¹</p><span class="heriest-pill-pink">Terlaris</span></div>
               </div>
-
               <div class="heriest-list-row" style="border-bottom: none;">
-                <div class="heriest-list-left">
-                  <img src="css/testimoni_2.png" alt="Sablon Kaos" class="heriest-list-thumb" />
-                  <div>
-                    <p class="heriest-list-name">Sablon Kaos Custom</p>
-                    <p class="heriest-list-cat">Merchandise</p>
-                  </div>
-                </div>
-                <div class="heriest-list-right">
-                  <p class="heriest-price-gold">Rp 63.750</p>
-                  <span class="heriest-pill-pink">Diskon 15%</span>
-                </div>
+                <div class="heriest-list-left"><img src="css/testimoni_2.png" alt="Sablon Kaos" class="heriest-list-thumb" /><div><p class="heriest-list-name">Sablon Kaos Custom</p><p class="heriest-list-cat">Merchandise</p></div></div>
+                <div class="heriest-list-right"><p class="heriest-price-gold">Rp 63.750</p><span class="heriest-pill-pink">Diskon 15%</span></div>
               </div>
             </div>
           </section>
 
-          <!-- =============================================================== -->
-          <!-- HALAMAN 2: KELOLA PRODUK / KATALOG PRODUK (DESKTOP - 21)        -->
-          <!-- =============================================================== -->
           <section id="admin-sec-produk" class="heriest-admin-sec" style="display: none;">
-            <!-- Bar Filter & Tambah Produk -->
             <div class="heriest-filter-card">
               <div class="heriest-filter-left">
                 <input type="text" id="search-produk-input" onkeyup="filterProdukTable()" placeholder="cari nama produk" class="heriest-pill-input" />
@@ -614,18 +1125,16 @@
               <button type="button" class="heriest-btn-red" onclick="toggleFormProduk()">+ Tambah Produk</button>
             </div>
 
-            <!-- Form Tambah Produk (Muncul saat tombol + Tambah Produk diklik) -->
             <form id="form-add-produk" class="heriest-card-box" style="display: none; margin-bottom: 24px;" onsubmit="addNewProduk(event)">
               <h3 class="heriest-card-heading" style="margin-bottom: 14px;">Tambah Produk Baru</h3>
               <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-                <input type="text" id="new-prod-name" placeholder="Nama Produk (cth: Neon Box Bulat 60cm)" required class="heriest-pill-input" style="flex: 2;" />
-                <input type="text" id="new-prod-cat" placeholder="Kategori (cth: Neon box)" required class="heriest-pill-input" style="flex: 1;" />
-                <input type="text" id="new-prod-price" placeholder="Harga (cth: Harga Custom / Rp 1.500.000)" required class="heriest-pill-input" style="flex: 1;" />
+                <input type="text" id="new-prod-name" placeholder="Nama Produk" required class="heriest-pill-input" style="flex: 2;" />
+                <input type="text" id="new-prod-cat" placeholder="Kategori" required class="heriest-pill-input" style="flex: 1;" />
+                <input type="text" id="new-prod-price" placeholder="Harga" required class="heriest-pill-input" style="flex: 1;" />
                 <button type="submit" class="heriest-btn-red">Simpan Produk</button>
               </div>
             </form>
 
-            <!-- Tabel Katalog Produk -->
             <div class="heriest-table-card">
               <table class="heriest-catalog-table">
                 <thead>
@@ -639,225 +1148,41 @@
                 </thead>
                 <tbody id="tbody-katalog-produk">
                   <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
+                    <td><div class="heriest-prod-info"><img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" /><span>Neon Box Akrilik 2 Muka</span></div></td>
                     <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
                     <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk: Neon Box Akrilik 2 Muka')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="heriest-prod-info">
-                        <img src="css/layanankami_neonbox.png" alt="Neon Box" class="heriest-prod-img" />
-                        <span>Neon Box Akrilik 2 Muka</span>
-                      </div>
-                    </td>
-                    <td style="text-align: center;"><span class="heriest-cat-outline">Neon box</span></td>
-                    <td style="text-align: center;"><span class="heriest-price-red">Harga Custom</span></td>
-                    <td style="text-align: center;">
-                      <label class="heriest-switch-wrap">
-                        <input type="checkbox" checked onchange="toggleStatusText(this)" />
-                        <span class="heriest-slider"></span>
-                        <span class="status-lbl">Tampil</span>
-                      </label>
-                    </td>
-                    <td style="text-align: center;">
-                      <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button>
-                      <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-                    </td>
+                    <td style="text-align: center;"><label class="heriest-switch-wrap"><input type="checkbox" checked onchange="toggleStatusText(this)" /><span class="heriest-slider"></span><span class="status-lbl">Tampil</span></label></td>
+                    <td style="text-align: center;"><button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk')">Edit</button><button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button></td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </section>
 
-          <!-- =============================================================== -->
-          <!-- HALAMAN 3: KELOLA KATEGORI / KATEGORI PRODUK (DESKTOP - 22)     -->
-          <!-- =============================================================== -->
           <section id="admin-sec-kategori" class="heriest-admin-sec" style="display: none;">
-            <!-- Card Atas: Tambah Kategori Baru -->
             <div class="heriest-card-box" style="margin-bottom: 28px;">
               <h3 class="heriest-card-heading">Tambah Kategori Baru</h3>
               <p class="heriest-card-sub">Grup Kategori untuk memfilter produk di web</p>
-
               <form onsubmit="addNewKategori(event)" style="margin-top: 20px;">
                 <label class="heriest-field-label">Nama kategori</label>
                 <input type="text" id="input-nama-kategori" placeholder="Contoh : Neon Box" required class="heriest-grey-input" />
                 <button type="submit" class="heriest-btn-red-full">+ Simpan Kategori</button>
               </form>
             </div>
-
-            <!-- Card Bawah: Daftar Kategori -->
             <div class="heriest-card-box heriest-half-card">
               <div class="heriest-card-header-flex">
-                <div>
-                  <h3 class="heriest-card-heading">Daftar Kategori</h3>
-                  <p class="heriest-card-sub">Semua kategori yang terdaftar</p>
-                </div>
+                <div><h3 class="heriest-card-heading">Daftar Kategori</h3><p class="heriest-card-sub">Semua kategori yang terdaftar</p></div>
                 <span id="badge-total-kategori" class="heriest-total-pill">TOTAL</span>
               </div>
-
               <div class="heriest-mini-table-wrap">
                 <table class="heriest-mini-table">
-                  <thead>
-                    <tr>
-                      <th>NAMA KATEGORI</th>
-                      <th>SLUG URL</th>
-                      <th>JUMLAH PRODUK</th>
-                      <th>AKSI</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tbody-kategori">
-                    <!-- Kosong sesuai desain awal; akan terisi otomatis saat + Simpan Kategori diklik -->
-                  </tbody>
+                  <thead><tr><th>NAMA KATEGORI</th><th>SLUG URL</th><th>JUMLAH PRODUK</th><th>AKSI</th></tr></thead>
+                  <tbody id="tbody-kategori"></tbody>
                 </table>
               </div>
             </div>
           </section>
 
-          <!-- =============================================================== -->
-          <!-- HALAMAN 4: KELOLA PORTOFOLIO / PORTOFOLIO (DESKTOP - 23)        -->
-          <!-- =============================================================== -->
           <section id="admin-sec-portofolio" class="heriest-admin-sec" style="display: none;">
             <div class="heriest-filter-card">
               <div class="heriest-filter-left">
@@ -867,145 +1192,129 @@
               </div>
               <button type="button" class="heriest-btn-red" onclick="toggleFormPortofolio()">+ Tambah Produk</button>
             </div>
-
             <form id="form-add-portofolio" class="heriest-card-box" style="display: none; margin-top: 24px;" onsubmit="addNewPortofolio(event)">
               <h3 class="heriest-card-heading" style="margin-bottom: 14px;">Tambah Item Portofolio</h3>
               <div style="display: flex; gap: 14px; flex-wrap: wrap;">
-                <input type="text" id="porto-judul" placeholder="Judul Proyek (cth: Pemasangan Neon Box Cafe)" required class="heriest-pill-input" style="flex: 2;" />
-                <input type="text" id="porto-kat" placeholder="Kategori (cth: Neon Box)" required class="heriest-pill-input" style="flex: 1;" />
+                <input type="text" id="porto-judul" placeholder="Judul Proyek" required class="heriest-pill-input" style="flex: 2;" />
+                <input type="text" id="porto-kat" placeholder="Kategori" required class="heriest-pill-input" style="flex: 1;" />
                 <button type="submit" class="heriest-btn-red">Simpan</button>
               </div>
             </form>
-
             <div id="portofolio-grid-list" class="heriest-porto-grid"></div>
           </section>
 
-          <!-- =============================================================== -->
-          <!-- HALAMAN 5: BANNER & PROMO (DESKTOP - 24)                        -->
-          <!-- =============================================================== -->
           <section id="admin-sec-banner" class="heriest-admin-sec" style="display: none;">
-            <!-- Card Atas: Tambah Banner Baru -->
             <div class="heriest-card-box" style="margin-bottom: 28px;">
               <h3 class="heriest-card-heading">Tambah Banner Baru</h3>
               <p class="heriest-card-sub">Banner tampil di section promo homepage</p>
-
               <form onsubmit="addNewBanner(event)" style="margin-top: 20px;">
                 <div class="heriest-banner-row2">
-                  <div>
-                    <label class="heriest-field-label">Headline</label>
-                    <input type="text" id="banner-headline" required class="heriest-outline-input" />
-                  </div>
-                  <div>
-                    <label class="heriest-field-label">Deskripsi</label>
-                    <input type="text" id="banner-deskripsi" required class="heriest-outline-input" />
-                  </div>
+                  <div><label class="heriest-field-label">Headline</label><input type="text" id="banner-headline" required class="heriest-outline-input" /></div>
+                  <div><label class="heriest-field-label">Deskripsi</label><input type="text" id="banner-deskripsi" required class="heriest-outline-input" /></div>
                 </div>
-
                 <div class="heriest-banner-row3">
-                  <div>
-                    <label class="heriest-field-label">Teks CTA</label>
-                    <input type="text" id="banner-cta-text" required class="heriest-outline-input" />
-                  </div>
-                  <div>
-                    <label class="heriest-field-label">Link CTA</label>
-                    <input type="text" id="banner-cta-link" required class="heriest-outline-input" />
-                  </div>
-                  <div>
-                    <label class="heriest-field-label">Gambar (JPG/PNG/WEBP,max 5MB)</label>
-                    <div class="heriest-file-box">
-                      <input type="file" id="banner-file" accept="image/*" />
-                    </div>
-                  </div>
+                  <div><label class="heriest-field-label">Teks CTA</label><input type="text" id="banner-cta-text" required class="heriest-outline-input" /></div>
+                  <div><label class="heriest-field-label">Link CTA</label><input type="text" id="banner-cta-link" required class="heriest-outline-input" /></div>
+                  <div><label class="heriest-field-label">Gambar (JPG/PNG/WEBP,max 5MB)</label><div class="heriest-file-box"><input type="file" id="banner-file" accept="image/*" /></div></div>
                 </div>
-
                 <div class="heriest-checkbox-center">
-                  <label>
-                    <input type="checkbox" id="banner-aktif" checked />
-                    <span>Aktif / tampilan di homepage</span>
-                  </label>
+                  <label><input type="checkbox" id="banner-aktif" checked /><span>Aktif / tampilan di homepage</span></label>
                 </div>
-
                 <button type="submit" class="heriest-btn-red-full">+ Simpan Banner</button>
               </form>
             </div>
-
-            <!-- Card Bawah: Daftar Banner & Promo -->
             <div class="heriest-card-box heriest-half-card">
               <div class="heriest-card-header-flex">
-                <div>
-                  <h3 class="heriest-card-heading">Daftar Banner &amp; Promo</h3>
-                  <p class="heriest-card-sub">Semua banner promo yang terdaftar</p>
-                </div>
+                <div><h3 class="heriest-card-heading">Daftar Banner &amp; Promo</h3><p class="heriest-card-sub">Semua banner promo yang terdaftar</p></div>
                 <span id="badge-total-banner" class="heriest-total-pill">TOTAL</span>
               </div>
-
               <div class="heriest-mini-table-wrap">
                 <table class="heriest-mini-table">
-                  <thead>
-                    <tr>
-                      <th>GAMBAR</th>
-                      <th>HEADLINE</th>
-                      <th>CTA</th>
-                      <th>STATUS</th>
-                      <th>AKSI</th>
-                    </tr>
-                  </thead>
-                  <tbody id="tbody-banner">
-                    <!-- Kosong sesuai desain awal; terisi otomatis saat + Simpan Banner diklik -->
-                  </tbody>
+                  <thead><tr><th>GAMBAR</th><th>HEADLINE</th><th>CTA</th><th>STATUS</th><th>AKSI</th></tr></thead>
+                  <tbody id="tbody-banner"></tbody>
                 </table>
               </div>
             </div>
           </section>
 
-          <!-- =============================================================== -->
-          <!-- HALAMAN KOSONG UNTUK MENU SEKUNDER (KONTEN WEB & KONFIGURASI)   -->
-          <!-- =============================================================== -->
           <section id="admin-sec-kosong" class="heriest-admin-sec" style="display: none;">
             <div class="heriest-card-box" style="text-align: center; padding: 60px 24px;">
               <h3 id="kosong-title" class="heriest-card-heading" style="margin-bottom: 8px;">Menu Tambahan</h3>
-              <p class="heriest-card-sub">Menu navigasi ini tersedia di sidebar sesuai desain; silakan pilih salah satu dari 5 menu utama di atas untuk mengelola data.</p>
+              <p class="heriest-card-sub">Menu navigasi ini tersedia di sidebar; silakan pilih salah satu dari 5 menu utama di atas untuk mengelola data.</p>
             </div>
           </section>
-
         </div>
       </main>
-
     </div>
   </div>
 
   <!-- ===================================================================== -->
-  <!-- JAVASCRIPT NAVIGASI & INTERAKSI                                       -->
+  <!-- JAVASCRIPT NAVIGASI 5 HALAMAN USER + ADMIN                            -->
   <!-- ===================================================================== -->
   <script>
-    // 1. Skala Otomatis Halaman User (2848px) tanpa ruang putih berlebih di bawah
     function fitDesignToScreen() {
       const userView = document.getElementById('user-view');
       if (!userView || userView.style.display === 'none') return;
-
       const frame = document.querySelector('.furniture-33-frame-furniture33');
       if (!frame) return;
-
       const designWidth = 2848;
       const viewportWidth = document.documentElement.clientWidth;
-
       if (viewportWidth < designWidth) {
-        const scale = viewportWidth / designWidth;
         frame.style.transform = 'none';
-        frame.style.zoom = scale;
-        document.documentElement.style.height = 'auto';
-        document.body.style.height = 'auto';
+        frame.style.zoom = viewportWidth / designWidth;
       } else {
         frame.style.zoom = 1;
         frame.style.transform = 'none';
       }
     }
-
     window.addEventListener('DOMContentLoaded', fitDesignToScreen);
     window.addEventListener('load', fitDesignToScreen);
     window.addEventListener('resize', fitDesignToScreen);
 
-    // 2. Navigasi User <-> Login Admin <-> Dashboard Admin
+    function switchUserPage(pageKey, navEl) {
+      document.querySelectorAll('.user-subpage').forEach(p => p.style.display = 'none');
+      const target = document.getElementById('user-page-' + pageKey);
+      if (target) target.style.display = 'block';
+      document.querySelectorAll('.user-nav-link').forEach(link => link.classList.remove('active'));
+      if (navEl) navEl.classList.add('active');
+      fitDesignToScreen();
+      window.scrollTo(0, 0);
+    }
+
+    function goToKontakBeranda() {
+      switchUserPage('beranda', document.querySelector('[data-upage=beranda]'));
+      setTimeout(() => {
+        const el = document.getElementById('n120179');
+        if (el) el.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+
+    function orderService(serviceName) {
+      const badge = document.getElementById('user-cart-badge');
+      badge.textContent = parseInt(badge.textContent || '4', 10) + 1;
+      const waMsg = encodeURIComponent('Halo CV. Heriest Advertising, saya ingin memesan / konsultasi layanan: ' + serviceName);
+      window.open('https://wa.me/6282338345777?text=' + waMsg, '_blank');
+    }
+
+    function toggleFaqRow(rowEl) {
+      const isOpen = rowEl.classList.contains('open');
+      rowEl.classList.toggle('open');
+      const circle = rowEl.querySelector('.faq-acc-circle');
+      if (circle) circle.innerHTML = isOpen ? '+' : '&times;';
+    }
+
+    function selectFaqCat(cat, btnEl) {
+      document.querySelectorAll('.faq-cat-btn').forEach(b => b.classList.remove('active'));
+      if (btnEl) btnEl.classList.add('active');
+    }
+
+    function filterFaqItems() {
+      const q = document.getElementById('faq-search-input').value.toLowerCase();
+      document.querySelectorAll('.faq-acc-row').forEach(row => {
+        row.style.display = row.textContent.toLowerCase().includes(q) ? 'block' : 'none';
+      });
+    }
+
     function openAdminLogin() {
       document.getElementById('user-view').style.display = 'none';
       document.getElementById('admin-dashboard-view').style.display = 'none';
@@ -1026,7 +1335,6 @@
       e.preventDefault();
       const user = document.getElementById('admin-username').value.trim();
       const pass = document.getElementById('admin-password').value.trim();
-
       if (user === 'admin' && pass === 'admin123') {
         document.getElementById('admin-login-view').style.display = 'none';
         document.getElementById('user-view').style.display = 'none';
@@ -1044,155 +1352,49 @@
       openAdminLogin();
     }
 
-    // 3. Perpindahan Halaman di Sidebar Admin
-    const headerTitleMap = {
-      ringkasan: 'Dashbord ringkasan',
-      produk: 'Katalog Produk',
-      kategori: 'Kategori Produk',
-      portofolio: 'Portofolio',
-      banner: 'Banner & Promo'
-    };
-
+    const headerTitleMap = { ringkasan: 'Dashbord ringkasan', produk: 'Katalog Produk', kategori: 'Kategori Produk', portofolio: 'Portofolio', banner: 'Banner & Promo' };
     function switchAdminPage(pageKey, btnEl, customTitle) {
       document.querySelectorAll('.heriest-admin-sec').forEach(sec => sec.style.display = 'none');
       document.getElementById('admin-sec-' + pageKey).style.display = 'block';
-
       document.querySelectorAll('.heriest-menu-item, .heriest-menu-subitem').forEach(el => el.classList.remove('active'));
       if (btnEl) btnEl.classList.add('active');
-
       const titleText = customTitle || headerTitleMap[pageKey] || 'Dashbord ringkasan';
       document.getElementById('topbar-page-title').textContent = titleText;
-      if (pageKey === 'kosong' && customTitle) {
-        document.getElementById('kosong-title').textContent = customTitle;
-      }
-
-      // Tombol "+ Tambah Produk" di topbar tampil pada Dashbord ringkasan sesuai desain
-      const topAddBtn = document.getElementById('topbar-add-btn');
-      topAddBtn.style.display = (pageKey === 'ringkasan') ? 'inline-flex' : 'none';
+      if (pageKey === 'kosong' && customTitle) document.getElementById('kosong-title').textContent = customTitle;
+      document.getElementById('topbar-add-btn').style.display = (pageKey === 'ringkasan') ? 'inline-flex' : 'none';
     }
 
-    // 4. Interaksi Kelola Produk
-    function toggleFormProduk() {
-      const f = document.getElementById('form-add-produk');
-      f.style.display = f.style.display === 'none' ? 'block' : 'none';
-    }
-
+    function toggleFormProduk() { const f = document.getElementById('form-add-produk'); f.style.display = f.style.display === 'none' ? 'block' : 'none'; }
     function addNewProduk(e) {
       e.preventDefault();
-      const nama = document.getElementById('new-prod-name').value;
-      const kat = document.getElementById('new-prod-cat').value;
-      const harga = document.getElementById('new-prod-price').value;
-
-      const tbody = document.getElementById('tbody-katalog-produk');
+      const nama = document.getElementById('new-prod-name').value, kat = document.getElementById('new-prod-cat').value, harga = document.getElementById('new-prod-price').value;
       const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td>
-          <div class="heriest-prod-info">
-            <img src="css/layanankami_neonbox.png" alt="${nama}" class="heriest-prod-img" />
-            <span>${nama}</span>
-          </div>
-        </td>
-        <td style="text-align: center;"><span class="heriest-cat-outline">${kat}</span></td>
-        <td style="text-align: center;"><span class="heriest-price-red">${harga}</span></td>
-        <td style="text-align: center;">
-          <label class="heriest-switch-wrap">
-            <input type="checkbox" checked onchange="toggleStatusText(this)" />
-            <span class="heriest-slider"></span>
-            <span class="status-lbl">Tampil</span>
-          </label>
-        </td>
-        <td style="text-align: center;">
-          <button type="button" class="heriest-mini-btn" onclick="alert('Mode Edit Produk: ${nama}')">Edit</button>
-          <button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button>
-        </td>
-      `;
-      tbody.prepend(tr);
-      e.target.reset();
-      document.getElementById('form-add-produk').style.display = 'none';
+      tr.innerHTML = `<td><div class="heriest-prod-info"><img src="css/layanankami_neonbox.png" alt="${nama}" class="heriest-prod-img" /><span>${nama}</span></div></td><td style="text-align:center;"><span class="heriest-cat-outline">${kat}</span></td><td style="text-align:center;"><span class="heriest-price-red">${harga}</span></td><td style="text-align:center;"><label class="heriest-switch-wrap"><input type="checkbox" checked onchange="toggleStatusText(this)" /><span class="heriest-slider"></span><span class="status-lbl">Tampil</span></label></td><td style="text-align:center;"><button type="button" class="heriest-mini-btn" onclick="alert('Edit')">Edit</button><button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button></td>`;
+      document.getElementById('tbody-katalog-produk').prepend(tr); e.target.reset(); document.getElementById('form-add-produk').style.display = 'none';
     }
-
-    function toggleStatusText(checkbox) {
-      const lbl = checkbox.parentElement.querySelector('.status-lbl');
-      lbl.textContent = checkbox.checked ? 'Tampil' : 'Sembunyi';
-      lbl.style.color = checkbox.checked ? '#059669' : '#6b7280';
-    }
-
+    function toggleStatusText(cb) { const l = cb.parentElement.querySelector('.status-lbl'); l.textContent = cb.checked ? 'Tampil' : 'Sembunyi'; l.style.color = cb.checked ? '#059669' : '#6b7280'; }
     function filterProdukTable() {
-      const keyword = document.getElementById('search-produk-input').value.toLowerCase();
-      const cat = document.getElementById('filter-kategori-select').value.toLowerCase();
-      const rows = document.querySelectorAll('#tbody-katalog-produk tr');
-      rows.forEach(row => {
-        const text = row.textContent.toLowerCase();
-        const matchKey = text.includes(keyword);
-        const matchCat = !cat || text.includes(cat);
-        row.style.display = (matchKey && matchCat) ? '' : 'none';
-      });
+      const k = document.getElementById('search-produk-input').value.toLowerCase(), c = document.getElementById('filter-kategori-select').value.toLowerCase();
+      document.querySelectorAll('#tbody-katalog-produk tr').forEach(r => { const t = r.textContent.toLowerCase(); r.style.display = (t.includes(k) && (!c || t.includes(c))) ? '' : 'none'; });
     }
-
-    // 5. Interaksi Kelola Kategori
     function addNewKategori(e) {
-      e.preventDefault();
-      const nama = document.getElementById('input-nama-kategori').value.trim();
-      if (!nama) return;
-      const slug = nama.toLowerCase().replace(/[^a-z0-9]+/g, '-');
-
-      const tbody = document.getElementById('tbody-kategori');
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td><strong>${nama}</strong></td>
-        <td>/${slug}</td>
-        <td>0 Produk</td>
-        <td><button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button></td>
-      `;
-      tbody.appendChild(tr);
-      document.getElementById('badge-total-kategori').textContent = 'TOTAL: ' + tbody.children.length;
-      e.target.reset();
+      e.preventDefault(); const n = document.getElementById('input-nama-kategori').value.trim(); if (!n) return;
+      const tbody = document.getElementById('tbody-kategori'), tr = document.createElement('tr');
+      tr.innerHTML = `<td><strong>${n}</strong></td><td>/${n.toLowerCase().replace(/[^a-z0-9]+/g, '-')}</td><td>0 Produk</td><td><button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button></td>`;
+      tbody.appendChild(tr); document.getElementById('badge-total-kategori').textContent = 'TOTAL: ' + tbody.children.length; e.target.reset();
     }
-
-    // 6. Interaksi Kelola Portofolio
-    function toggleFormPortofolio() {
-      const f = document.getElementById('form-add-portofolio');
-      f.style.display = f.style.display === 'none' ? 'block' : 'none';
-    }
-
+    function toggleFormPortofolio() { const f = document.getElementById('form-add-portofolio'); f.style.display = f.style.display === 'none' ? 'block' : 'none'; }
     function addNewPortofolio(e) {
-      e.preventDefault();
-      const judul = document.getElementById('porto-judul').value;
-      const kat = document.getElementById('porto-kat').value;
-      const grid = document.getElementById('portofolio-grid-list');
-      const card = document.createElement('div');
-      card.className = 'heriest-card-box';
-      card.style.marginTop = '20px';
-      card.innerHTML = `
-        <img src="css/baground_beranda.jpeg" alt="${judul}" style="width:100%; height:160px; object-fit:cover; border-radius:12px; margin-bottom:12px;" />
-        <h4 style="font-size:16px; margin-bottom:4px;">${judul}</h4>
-        <p style="font-size:13px; color:#6b7280; margin-bottom:10px;">Kategori: ${kat}</p>
-        <button type="button" class="heriest-mini-btn" onclick="this.closest('.heriest-card-box').remove()">Hapus</button>
-      `;
-      grid.appendChild(card);
-      e.target.reset();
-      document.getElementById('form-add-portofolio').style.display = 'none';
+      e.preventDefault(); const j = document.getElementById('porto-judul').value, k = document.getElementById('porto-kat').value;
+      const card = document.createElement('div'); card.className = 'heriest-card-box'; card.style.marginTop = '20px';
+      card.innerHTML = `<img src="css/baground_beranda.jpeg" alt="${j}" style="width:100%; height:160px; object-fit:cover; border-radius:12px; margin-bottom:12px;" /><h4 style="font-size:16px; margin-bottom:4px;">${j}</h4><p style="font-size:13px; color:#6b7280; margin-bottom:10px;">Kategori: ${k}</p><button type="button" class="heriest-mini-btn" onclick="this.closest('.heriest-card-box').remove()">Hapus</button>`;
+      document.getElementById('portofolio-grid-list').appendChild(card); e.target.reset(); document.getElementById('form-add-portofolio').style.display = 'none';
     }
-
-    // 7. Interaksi Banner & Promo
     function addNewBanner(e) {
-      e.preventDefault();
-      const headline = document.getElementById('banner-headline').value;
-      const ctaText = document.getElementById('banner-cta-text').value;
-      const aktif = document.getElementById('banner-aktif').checked;
-
-      const tbody = document.getElementById('tbody-banner');
-      const tr = document.createElement('tr');
-      tr.innerHTML = `
-        <td><img src="css/baground_beranda.jpeg" alt="Banner" style="width:48px; height:32px; object-fit:cover; border-radius:6px;" /></td>
-        <td><strong>${headline}</strong></td>
-        <td>${ctaText}</td>
-        <td><span style="color:${aktif ? '#059669' : '#6b7280'}; font-weight:600;">${aktif ? 'Aktif' : 'Nonaktif'}</span></td>
-        <td><button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button></td>
-      `;
-      tbody.appendChild(tr);
-      document.getElementById('badge-total-banner').textContent = 'TOTAL: ' + tbody.children.length;
-      e.target.reset();
+      e.preventDefault(); const h = document.getElementById('banner-headline').value, c = document.getElementById('banner-cta-text').value, a = document.getElementById('banner-aktif').checked;
+      const tbody = document.getElementById('tbody-banner'), tr = document.createElement('tr');
+      tr.innerHTML = `<td><img src="css/baground_beranda.jpeg" alt="Banner" style="width:48px; height:32px; object-fit:cover; border-radius:6px;" /></td><td><strong>${h}</strong></td><td>${c}</td><td><span style="color:${a ? '#059669' : '#6b7280'}; font-weight:600;">${a ? 'Aktif' : 'Nonaktif'}</span></td><td><button type="button" class="heriest-mini-btn" onclick="this.closest('tr').remove()">Hapus</button></td>`;
+      tbody.appendChild(tr); document.getElementById('badge-total-banner').textContent = 'TOTAL: ' + tbody.children.length; e.target.reset();
     }
   </script>
 </body>
